@@ -4,6 +4,16 @@
 
 let selectedCategory = "Mixed Practice";
 let selectedLength = 10;
+// ===============================
+// URL CATEGORY
+// ===============================
+
+const urlParams = new URLSearchParams(window.location.search);
+const categoryFromURL = urlParams.get("category");
+
+if (categoryFromURL) {
+    selectedCategory = categoryFromURL;
+}
 
 let currentQuestions = [];
 let currentQuestionIndex = 0;
@@ -373,7 +383,384 @@ const questions = [
         answers: ["turn down", "turn up", "turn into", "turn over"],
         correct: 0,
         explanation: "'Turn down' means to reject an offer."
-    }
+    },
+    {
+        category: "Grammar",
+        question: "By the time we arrived, the film ___ already started.",
+        answers: ["has", "had", "was", "would"],
+        correct: 1,
+        explanation: "The past perfect 'had started' is used for an action that happened before another past action."
+    },
+    {
+        category: "Grammar",
+        question: "I wish I ___ more time to finish the project yesterday.",
+        answers: ["have", "had", "would have", "had had"],
+        correct: 3,
+        explanation: "For a regret about a past situation, we use 'wish + past perfect': 'I wish I had had more time.'"
+    },
+    {
+        category: "Grammar",
+        question: "She ___ to work by bus every day, but now she cycles.",
+        answers: ["used to go", "was used to go", "would going", "use to going"],
+        correct: 0,
+        explanation: "'Used to + infinitive' describes a past habit or situation that is no longer true."
+    },
+    {
+        category: "Grammar",
+        question: "If I ___ about the meeting, I would have attended it.",
+        answers: ["knew", "had known", "would know", "have known"],
+        correct: 1,
+        explanation: "This is a third conditional: 'if + past perfect' followed by 'would have + past participle'."
+    },
+    {
+        category: "Grammar",
+        question: "The new bridge ___ by the end of next year.",
+        answers: ["will complete", "will have completed", "will have been completed", "is completing"],
+        correct: 2,
+        explanation: "The future perfect passive 'will have been completed' describes something that will be finished by a future time."
+    },
+    {
+        category: "Grammar",
+        question: "You ___ have told me earlier. I could have helped you.",
+        answers: ["should", "must", "can", "would"],
+        correct: 0,
+        explanation: "'Should have + past participle' is used to say that something was the better or expected thing to do in the past."
+    },
+    {
+        category: "Grammar",
+        question: "Despite ___ very tired, he continued working.",
+        answers: ["he was", "being", "to be", "was"],
+        correct: 1,
+        explanation: "'Despite' is followed by a noun, pronoun or gerund (-ing form), not an infinitive."
+    },
+    {
+        category: "Grammar",
+        question: "I haven't seen Maria ___ she moved to London.",
+        answers: ["for", "during", "since", "while"],
+        correct: 2,
+        explanation: "'Since' introduces the point in time when an action or situation began."
+    },
+    {
+        category: "Grammar",
+        question: "The teacher suggested ___ the exercise again.",
+        answers: ["to do", "doing", "do", "that doing"],
+        correct: 1,
+        explanation: "'Suggest' is normally followed by a gerund when referring to an activity: 'suggest doing something'."
+    },
+    {
+        category: "Grammar",
+        question: "He denied ___ the window.",
+        answers: ["break", "to break", "breaking", "broken"],
+        correct: 2,
+        explanation: "'Deny' is followed by a gerund: 'deny doing something'."
+    },
+    {
+        category: "Grammar",
+        question: "We ___ dinner when the lights suddenly went out.",
+        answers: ["had", "have", "were having", "have had"],
+        correct: 2,
+        explanation: "The past continuous describes an action that was in progress when another past event occurred."
+    },
+    {
+        category: "Grammar",
+        question: "I'd rather you ___ me before making that decision.",
+        answers: ["tell", "told", "have told", "would tell"],
+        correct: 1,
+        explanation: "'Would rather + subject + past simple' is used to express a preference about another person's action."
+    },
+    {
+        category: "Grammar",
+        question: "It's high time we ___ home.",
+        answers: ["go", "went", "have gone", "will go"],
+        correct: 1,
+        explanation: "'It's high time + past simple' is used to say that something should happen now or very soon."
+    },
+    {
+        category: "Grammar",
+        question: "The book, ___ was published last year, has become a bestseller.",
+        answers: ["who", "where", "which", "whose"],
+        correct: 2,
+        explanation: "'Which' is used as a relative pronoun to refer to things."
+    },
+    {
+        category: "Grammar",
+        question: "The woman ___ car was stolen reported it to the police.",
+        answers: ["who", "whose", "which", "whom"],
+        correct: 1,
+        explanation: "'Whose' expresses possession in a relative clause."
+    },
+    {
+        category: "Grammar",
+        question: "You won't pass the exam unless you ___ harder.",
+        answers: ["will study", "studied", "study", "would study"],
+        correct: 2,
+        explanation: "In a first conditional, the 'unless' clause uses the present simple to refer to a future condition."
+    },
+    {
+        category: "Grammar",
+        question: "She asked me where ___ the previous evening.",
+        answers: ["I had been", "had I been", "I have been", "was I"],
+        correct: 0,
+        explanation: "In reported questions, we use normal statement word order. The past perfect fits the earlier past event."
+    },
+    {
+        category: "Grammar",
+        question: "He is believed ___ one of the best players in the country.",
+        answers: ["being", "to be", "be", "to being"],
+        correct: 1,
+        explanation: "After 'is believed', we use the infinitive: 'He is believed to be...'"
+    },
+    {
+        category: "Grammar",
+        question: "I regret ___ you that your application was unsuccessful.",
+        answers: ["inform", "to inform", "informing", "informed"],
+        correct: 1,
+        explanation: "'Regret to + infinitive' is commonly used when giving bad news."
+    },
+    {
+        category: "Grammar",
+        question: "I regret ___ so much money on something I didn't need.",
+        answers: ["to spend", "spend", "spending", "spent"],
+        correct: 2,
+        explanation: "'Regret + -ing' refers to being sorry about something that happened in the past."
+    },
+    {
+        category: "Grammar",
+        question: "You needn't ___ all the food. There will be plenty for everyone.",
+        answers: ["to buy", "buying", "buy", "bought"],
+        correct: 2,
+        explanation: "After the modal 'needn't', we use the base form of the verb: 'needn't buy'."
+    },
+    {
+        category: "Grammar",
+        question: "The house needs ___ before we can move in.",
+        answers: ["paint", "to painting", "painting", "painted"],
+        correct: 2,
+        explanation: "'Need + -ing' can have a passive meaning: 'The house needs painting' means it needs to be painted."
+    },
+    {
+        category: "Grammar",
+        question: "No sooner ___ the train than it started to rain.",
+        answers: ["we had left", "had we left", "we left", "did we leave"],
+        correct: 1,
+        explanation: "After 'no sooner' at the beginning of a sentence, we use inversion: 'No sooner had we left...'"
+    },
+    {
+        category: "Grammar",
+        question: "Had I known about the problem, I ___ you.",
+        answers: ["would tell", "would have told", "will tell", "told"],
+        correct: 1,
+        explanation: "'Had I known' is an inverted third conditional meaning 'If I had known'."
+    },
+    {
+        category: "Grammar",
+        question: "By this time tomorrow, we ___ on the beach.",
+        answers: ["will lie", "will be lying", "are lying", "have lain"],
+        correct: 1,
+        explanation: "The future continuous describes an action that will be in progress at a particular time in the future."
+    },
+
+{
+    category: "Vocabulary",
+    question: "The company decided to ___ a new product next month.",
+    answers: ["launch", "throw", "set", "raise"],
+    correct: 0,
+    explanation: "\"Launch a product\" means to officially introduce it to the market."
+},
+
+{
+    category: "Vocabulary",
+    question: "I was completely ___ by the amount of homework we were given.",
+    answers: ["overwhelmed", "overturned", "overlooked", "overcharged"],
+    correct: 0,
+    explanation: "\"Overwhelmed\" means feeling that something is too much to deal with."
+},
+
+{
+    category: "Vocabulary",
+    question: "The teacher asked us to ___ attention to the instructions.",
+    answers: ["make", "give", "pay", "take"],
+    correct: 2,
+    explanation: "The correct expression is \"pay attention\"."
+},
+
+{
+    category: "Vocabulary",
+    question: "The hotel is within walking ___ of the city centre.",
+    answers: ["distance", "length", "space", "range"],
+    correct: 0,
+    explanation: "\"Within walking distance\" means close enough to walk to."
+},
+
+{
+    category: "Vocabulary",
+    question: "The company is trying to ___ its costs without reducing the quality of its products.",
+    answers: ["reduce", "decline", "remove", "decrease"],
+    correct: 0,
+    explanation: "\"Reduce costs\" means to make the costs lower."
+},
+
+{
+    category: "Vocabulary",
+    question: "She has always been very ___ of her younger brother.",
+    answers: ["supportive", "dependent", "reliable", "responsible"],
+    correct: 0,
+    explanation: "\"Supportive of someone\" means giving them encouragement and help."
+},
+
+{
+    category: "Vocabulary",
+    question: "The police are still trying to ___ what happened that night.",
+    answers: ["find out", "find up", "find over", "find through"],
+    correct: 0,
+    explanation: "\"Find out\" means to discover information or learn something."
+},
+
+{
+    category: "Vocabulary",
+    question: "We need to find a more ___ solution to this problem.",
+    answers: ["practical", "actual", "temporary", "traditional"],
+    correct: 0,
+    explanation: "\"Practical\" means suitable and effective for a particular situation."
+},
+
+{
+    category: "Vocabulary",
+    question: "The new law is expected to have a significant ___ on the environment.",
+    answers: ["affect", "effect", "result", "cause"],
+    correct: 1,
+    explanation: "\"Effect\" is a noun meaning the result or influence of something."
+},
+
+{
+    category: "Vocabulary",
+    question: "He refused to ___ responsibility for the mistake.",
+    answers: ["take", "do", "make", "hold"],
+    correct: 0,
+    explanation: "The correct expression is \"take responsibility\"."
+},
+
+{
+    category: "Vocabulary",
+    question: "The instructions were so ___ that nobody knew what to do.",
+    answers: ["confusing", "confused", "unclear", "uncertain"],
+    correct: 0,
+    explanation: "\"Confusing\" describes something that causes people to feel confused."
+},
+
+{
+    category: "Vocabulary",
+    question: "The athlete managed to ___ the record despite being injured.",
+    answers: ["break", "damage", "destroy", "crack"],
+    correct: 0,
+    explanation: "\"Break a record\" is the standard expression."
+},
+
+{
+    category: "Vocabulary",
+    question: "It took me several weeks to ___ to my new school.",
+    answers: ["adapt", "adopt", "accept", "approve"],
+    correct: 0,
+    explanation: "\"Adapt to\" means to change your behaviour or habits to suit a new situation."
+},
+
+{
+    category: "Vocabulary",
+    question: "The manager gave us some useful ___ on how to improve our presentation.",
+    answers: ["advice", "advices", "advise", "suggestion"],
+    correct: 0,
+    explanation: "\"Advice\" is an uncountable noun meaning suggestions about what someone should do."
+},
+
+{
+    category: "Vocabulary",
+    question: "The government is taking measures to ___ unemployment.",
+    answers: ["combat", "compete", "complete", "combine"],
+    correct: 0,
+    explanation: "\"Combat unemployment\" means to take action to reduce or deal with unemployment."
+},
+
+{
+    category: "Vocabulary",
+    question: "She was ___ disappointed when she found out that the concert had been cancelled.",
+    answers: ["deeply", "strongly", "heavily", "greatlyly"],
+    correct: 0,
+    explanation: "\"Deeply disappointed\" is a natural collocation meaning very disappointed."
+},
+
+{
+    category: "Vocabulary",
+    question: "The museum contains a ___ collection of ancient artefacts.",
+    answers: ["vast", "wide", "long", "tall"],
+    correct: 0,
+    explanation: "\"Vast\" means extremely large in size or amount."
+},
+
+{
+    category: "Vocabulary",
+    question: "You should ___ advantage of this opportunity while you can.",
+    answers: ["make", "take", "do", "get"],
+    correct: 1,
+    explanation: "The correct expression is \"take advantage of\", meaning to make good use of an opportunity."
+},
+
+{
+    category: "Vocabulary",
+    question: "The students were asked to ___ a decision before the end of the lesson.",
+    answers: ["make", "do", "take", "create"],
+    correct: 0,
+    explanation: "\"Make a decision\" is the standard expression."
+},
+
+{
+    category: "Vocabulary",
+    question: "The restaurant has a good ___ for providing excellent service.",
+    answers: ["reputation", "fame", "rumour", "recognition"],
+    correct: 0,
+    explanation: "\"Reputation\" means the general opinion people have about someone or something."
+},
+
+{
+    category: "Vocabulary",
+    question: "The instructions were ___ difficult to understand.",
+    answers: ["fairly", "fair", "fairness", "fairest"],
+    correct: 0,
+    explanation: "\"Fairly difficult\" means moderately or quite difficult."
+},
+
+{
+    category: "Vocabulary",
+    question: "The company needs to ___ its employees with the necessary equipment.",
+    answers: ["provide", "offer", "give", "send"],
+    correct: 0,
+    explanation: "\"Provide someone with something\" is the correct structure."
+},
+
+{
+    category: "Vocabulary",
+    question: "After years of research, scientists finally made a major ___ in the field.",
+    answers: ["breakthrough", "breakdown", "breakout", "breakaway"],
+    correct: 0,
+    explanation: "A \"breakthrough\" is an important discovery or development."
+},
+
+{
+    category: "Vocabulary",
+    question: "The journey was delayed due to ___ weather conditions.",
+    answers: ["severe", "hard", "powerful", "heavy"],
+    correct: 0,
+    explanation: "\"Severe weather conditions\" is a natural expression for very bad or dangerous weather."
+},
+
+{
+    category: "Vocabulary",
+    question: "His explanation was so ___ that everyone understood the problem immediately.",
+    answers: ["convincing", "convinced", "persuasive", "persuaded"],
+    correct: 0,
+    explanation: "\"Convincing\" describes something that makes people believe that something is true or correct."
+},
+
+
 
 ];
 
@@ -405,6 +792,16 @@ function showScreen(id) {
 document.getElementById("b2LevelButton").addEventListener("click", function() {
     showScreen("practiceMenu");
 });
+
+if (categoryFromURL) {
+    showScreen("practiceMenu");
+
+    document.querySelectorAll(".practice-card").forEach(function(card) {
+        if (card.dataset.category === categoryFromURL) {
+            card.classList.add("selected");
+        }
+    });
+}
 
 
 // ===============================
@@ -447,6 +844,31 @@ document.querySelectorAll(".practice-card").forEach(function(button) {
     });
 
 });
+
+
+// ===============================
+// SELECT CATEGORY FROM URL
+// ===============================
+
+if (categoryFromURL) {
+
+    const categoryButton = document.querySelector(
+        `.practice-card[data-category="${categoryFromURL}"]`
+    );
+
+    if (categoryButton) {
+
+        document.querySelectorAll(".practice-card").forEach(function(card) {
+            card.classList.remove("selected");
+        });
+
+        categoryButton.classList.add("selected");
+
+        selectedCategory = categoryFromURL;
+
+    }
+
+}
 
 
 // ===============================
@@ -546,14 +968,13 @@ function loadQuestion() {
     document.getElementById("questionCategory").innerText =
         question.category.toUpperCase();
 
-    document.getElementById("questionNumber").innerText =
-        `Question ${currentQuestionIndex + 1}`;
+document.getElementById("questionNumber").innerText = "Question " + (currentQuestionIndex + 1);
 
-    document.getElementById("totalQuestions").innerText =
-        `${currentQuestionIndex + 1} / ${currentQuestions.length}`;
+document.getElementById("totalQuestions").innerText =
+    (currentQuestionIndex + 1) + " / " + currentQuestions.length;
 
-    document.getElementById("progress").style.width =
-        `${((currentQuestionIndex + 1) / currentQuestions.length) * 100}%`;
+document.getElementById("progress").style.width =
+    (((currentQuestionIndex + 1) / currentQuestions.length) * 100) + "%";
 
 
     const answersContainer =
