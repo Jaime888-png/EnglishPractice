@@ -803,6 +803,46 @@ if (categoryFromURL) {
     });
 }
 
+// ===============================
+// PRO LEVELS
+// ===============================
+
+const proModal = document.getElementById("proModal");
+const closeProModal = document.getElementById("closeProModal");
+const laterProButton = document.getElementById("laterProButton");
+const unlockProButton = document.getElementById("unlockProButton");
+
+document.querySelectorAll(".pro-level").forEach(function(level) {
+
+    level.addEventListener("click", function() {
+
+        proModal.style.display = "flex";
+
+    });
+
+});
+
+
+closeProModal.addEventListener("click", function() {
+
+    proModal.style.display = "none";
+
+});
+
+
+laterProButton.addEventListener("click", function() {
+
+    proModal.style.display = "none";
+
+});
+
+
+unlockProButton.addEventListener("click", function() {
+
+    alert("Error Coach Pro will be available soon.");
+
+});
+
 
 // ===============================
 // HOME BUTTONS
