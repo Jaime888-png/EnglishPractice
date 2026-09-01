@@ -62,48 +62,45 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
                         <h2>Choose your level</h2>
                     </div>
                 </div>
+             <div class="level-grid">
 
-                <div class="level-grid">
+    <button class="level-card unavailable pro-level">
+        <strong>A1</strong>
+        <span>Beginner</span>
+        <small>🔒 Error Coach Pro</small>
+    </button>
 
-                    <button class="level-card unavailable">
-                        <strong>A1</strong>
-                        <span>Beginner</span>
-                        <small>Coming soon</small>
-                    </button>
+    <button class="level-card unavailable pro-level">
+        <strong>A2</strong>
+        <span>Elementary</span>
+        <small>🔒 Error Coach Pro</small>
+    </button>
 
-                    <button class="level-card unavailable">
-                        <strong>A2</strong>
-                        <span>Elementary</span>
-                        <small>Coming soon</small>
-                    </button>
+    <button class="level-card unavailable pro-level">
+        <strong>B1</strong>
+        <span>Intermediate</span>
+        <small>🔒 Error Coach Pro</small>
+    </button>
 
-                    <button class="level-card unavailable">
-                        <strong>B1</strong>
-                        <span>Intermediate</span>
-                        <small>Coming soon</small>
-                    </button>
+    <button class="level-card available" id="b2LevelButton">
+        <strong>B2</strong>
+        <span>Upper-intermediate</span>
+        <small>Available now →</small>
+    </button>
 
-                    <button class="level-card available" id="b2LevelButton">
-                        <strong>B2</strong>
-                        <span>Upper-intermediate</span>
-                        <small>Available now →</small>
-                    </button>
+    <button class="level-card unavailable pro-level">
+        <strong>C1</strong>
+        <span>Advanced</span>
+        <small>🔒 Error Coach Pro</small>
+    </button>
 
-                    <button class="level-card unavailable">
-                        <strong>C1</strong>
-                        <span>Advanced</span>
-                        <small>Coming soon</small>
-                    </button>
+    <button class="level-card unavailable pro-level">
+        <strong>C2</strong>
+        <span>Proficiency</span>
+        <small>🔒 Error Coach Pro</small>
+    </button>
 
-                    <button class="level-card unavailable">
-                        <strong>C2</strong>
-                        <span>Proficiency</span>
-                        <small>Coming soon</small>
-                    </button>
-
-                </div>
-
-            </div>
+</div>
 
 
             <!-- FEATURES -->
@@ -205,6 +202,12 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
                     <strong>Key Word Transformations</strong>
                     <small>Rewrite sentences correctly</small>
                 </button>
+                
+                <button class="practice-card featured" id="errorCoachButton">
+    <span class="practice-icon">🧠</span>
+    <strong>Error Coach</strong>
+    <small>Turn your mistakes into personalised practice</small>
+</button>
 
                 <button class="practice-card featured" data-category="Mixed Practice">
                     <span class="practice-icon">🎲</span>
@@ -504,9 +507,60 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
         <p>English Practice · Learn something new every day.</p>
     </footer>
 
+    <!-- ================= PRO MODAL ================= -->
+
+<div id="proModal" class="pro-modal" style="display: none;">
+
+    <div class="pro-modal-content">
+
+        <button id="closeProModal" class="pro-modal-close">
+            ×
+        </button>
+
+        <div class="icon">🔒</div>
+
+        <p class="eyebrow">ERROR COACH PRO</p>
+
+        <h2>Unlock your full English potential.</h2>
+
+        <p>
+            Get access to all English levels from A1 to C2,
+            plus personalised practice with Special Weakness.
+        </p>
+
+        <div class="pro-features">
+
+            <p>✓ A1, A2, B1, B2, C1 & C2</p>
+            <p>✓ Special Weakness</p>
+            <p>✓ Personalised practice</p>
+            <p>✓ Progress tracking</p>
+
+        </div>
+
+        <div class="pro-price">
+            <strong>€4.99</strong>
+            <span>/ month</span>
+        </div>
+
+        <button id="unlockProButton" class="primary-button">
+            Unlock Pro →
+        </button>
+
+        <button id="laterProButton" class="secondary-button">
+            Maybe later
+        </button>
+
+    </div>
+
+</div>
+
 
     <script src="script.js"></script>
-
+<script>
+document.getElementById("errorCoachButton").addEventListener("click", function() {
+    window.location.href = "error-coach.html";
+});
+</script>
 </body>
 </html>
       
