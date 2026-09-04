@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A1 English Practice - Free Beginner English Exercises</title>
+
+    <meta name="description" content="Practise A1 English with free beginner grammar, vocabulary and everyday English exercises with instant feedback.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://jaime888-png.github.io/EnglishPractice/a1.html">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">EnglishPractice</div>
+
+    <a href="index.html" class="secondary-button">
+        Home
+    </a>
+
+    <div class="level-badge">
+        A1
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="hero">
+
+        <span class="eyebrow">
+            A1 ENGLISH PRACTICE
+        </span>
+
+        <h1>
+            Start learning English with confidence.
+        </h1>
+
+        <p>
+            Practise beginner English with simple exercises,
+            instant feedback and clear explanations.
+        </p>
+
+    </section>
+
+
+    <section class="practice-section">
+
+        <h2>Choose your practice</h2>
+
+        <div class="features">
+
+            <button class="practice-card" data-category="Grammar">
+                <strong>Grammar</strong>
+                <span>Basic English grammar</span>
+            </button>
+
+            <button class="practice-card" data-category="Vocabulary">
+                <strong>Vocabulary</strong>
+                <span>Everyday English words</span>
+            </button>
+
+            <button class="practice-card" data-category="Phrasal Verbs">
+                <strong>Phrasal Verbs</strong>
+                <span>Common beginner expressions</span>
+            </button>
+
+            <button class="practice-card" data-category="Collocations">
+                <strong>Collocations</strong>
+                <span>Words that go together</span>
+            </button>
+
+            <button class="practice-card" data-category="Word Formation">
+                <strong>Word Formation</strong>
+                <span>Build simple English words</span>
+            </button>
+
+            <button class="practice-card" data-category="Open Cloze">
+                <strong>Open Cloze</strong>
+                <span>Complete simple sentences</span>
+            </button>
+
+            <button class="practice-card" data-category="Mixed Practice">
+                <strong>Mixed Practice</strong>
+                <span>A mixture of A1 exercises</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="quiz-length-section">
+
+        <h2>Choose quiz length</h2>
+
+        <div class="quiz-length">
+
+            <button class="length-button" data-length="5">
+                5
+            </button>
+
+            <button class="length-button selected" data-length="10">
+                10
+            </button>
+
+            <button class="length-button" data-length="20">
+                20
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="start-section">
+
+        <button id="startPracticeButton" class="primary-button">
+            Start practice →
+        </button>
+
+    </section>
+
+
+    <section id="quizScreen" class="quiz-card" style="display: none;">
+
+        <div class="quiz-header">
+
+            <span id="questionNumber">
+                Question 1
+            </span>
+
+            <span id="progressText">
+                1 / 10
+            </span>
+
+        </div>
+
+        <div class="progress-bar">
+            <div id="progressBar"></div>
+        </div>
+
+        <h2 id="question">
+            Question
+        </h2>
+
+        <div id="answers"></div>
+
+        <div id="feedback" class="feedback"></div>
+
+        <button id="nextButton" class="primary-button" style="display: none;">
+            Next →
+        </button>
+
+    </section>
+
+
+    <section id="resultsScreen" class="results-card" style="display: none;">
+
+        <span class="eyebrow">
+            PRACTICE COMPLETE
+        </span>
+
+        <h2>
+            Your A1 results
+        </h2>
+
+        <div class="score-display">
+
+            <span id="score">
+                0 / 10
+            </span>
+
+        </div>
+
+        <p id="accuracy">
+            Accuracy: 0%
+        </p>
+
+        <div class="result-stats">
+
+            <div>
+                <strong id="correctAnswers">
+                    0
+                </strong>
+
+                <span>
+                    Correct
+                </span>
+            </div>
+
+            <div>
+                <strong id="totalQuestions">
+                    10
+                </strong>
+
+                <span>
+                    Questions
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="result-actions">
+
+            <button id="retryButton" class="primary-button">
+                Try again
+            </button>
+
+            <button id="choosePracticeButton" class="secondary-button">
+                Choose practice
+            </button>
+
+            <a href="index.html" class="secondary-button">
+                Back to home
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="a1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>B1 English Practice - Free Intermediate Exercises</title>
+
+    <meta name="description"
+          content="Practise B1 English for free with interactive grammar, vocabulary, phrasal verbs and exam-style exercises with instant feedback.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://jaime888-png.github.io/EnglishPractice/b1.html">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP NAVIGATION -->
+    <header class="topbar">
+        <div class="logo">English<span>Practice</span></div>
+
+        <nav class="nav-links">
+            <a href="index.html"
+               class="secondary-button"
+               style="text-decoration: none; padding: 9px 16px;">
+                ← Home
+            </a>
+
+            <div class="level-badge">B1</div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- B1 HOME -->
+        <section id="b1Home" class="screen active">
+
+            <div class="hero">
+                <p class="eyebrow">B1 ENGLISH PRACTICE</p>
+
+                <h1>
+                    Improve your English.<br>
+                    <span>Build your confidence.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Practise B1 English with interactive exercises,
+                    instant feedback and progress tracking.
+                </p>
+            </div>
+
+            <!-- PRACTICE AREAS -->
+            <div class="section-block">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">B1 ENGLISH</p>
+                        <h2>What do you want to practise?</h2>
+                    </div>
+                </div>
+
+                <div class="practice-grid">
+
+                    <button class="practice-card" data-category="Grammar">
+                        <span class="practice-icon">📘</span>
+                        <strong>Grammar</strong>
+                        <small>Tenses, conditionals, modals and more</small>
+                    </button>
+
+                    <button class="practice-card" data-category="Vocabulary">
+                        <span class="practice-icon">📚</span>
+                        <strong>Vocabulary</strong>
+                        <small>Useful B1 words and expressions</small>
+                    </button>
+
+                    <button class="practice-card" data-category="Phrasal Verbs">
+                        <span class="practice-icon">🔗</span>
+                        <strong>Phrasal Verbs</strong>
+                        <small>Common phrasal verbs for B1 English</small>
+                    </button>
+
+                    <button class="practice-card" data-category="Collocations">
+                        <span class="practice-icon">🧩</span>
+                        <strong>Collocations</strong>
+                        <small>Words that naturally go together</small>
+                    </button>
+
+                    <button class="practice-card" data-category="Word Formation">
+                        <span class="practice-icon">🔤</span>
+                        <strong>Word Formation</strong>
+                        <small>Build the correct word</small>
+                    </button>
+
+                    <button class="practice-card" data-category="Open Cloze">
+                        <span class="practice-icon">✏️</span>
+                        <strong>Open Cloze</strong>
+                        <small>Complete the missing words</small>
+                    </button>
+
+                    <button class="practice-card" data-category="Key Word Transformations">
+                        <span class="practice-icon">🔄</span>
+                        <strong>Key Word Transformations</strong>
+                        <small>Rewrite sentences correctly</small>
+                    </button>
+
+                    <button class="practice-card featured" data-category="Mixed Practice">
+                        <span class="practice-icon">🎲</span>
+                        <strong>Mixed Practice</strong>
+                        <small>A mixture of B1 questions</small>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- QUIZ LENGTH -->
+            <div class="practice-options">
+
+                <p class="eyebrow">QUIZ LENGTH</p>
+
+                <div class="length-buttons">
+
+                    <button class="length-button" data-length="5">
+                        <strong>Quick</strong>
+                        <span>5 questions</span>
+                    </button>
+
+                    <button class="length-button selected" data-length="10">
+                        <strong>Standard</strong>
+                        <span>10 questions</span>
+                    </button>
+
+                    <button class="length-button" data-length="20">
+                        <strong>Challenge</strong>
+                        <span>20 questions</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <button id="startPracticeButton" class="primary-button">
+                Start practice →
+            </button>
+
+        </section>
+
+
+        <!-- QUIZ -->
+        <section id="quiz" class="screen">
+
+            <div class="quiz-header">
+
+                <button id="backButton" class="back-button">
+                    ← Exit practice
+                </button>
+
+                <div class="progress-container">
+
+                    <div class="progress-text">
+                        <span id="questionNumber">Question 1</span>
+                        <span id="totalQuestions">1 / 10</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="progress" class="progress"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="quiz-card">
+
+                <div class="question-category"
+                     id="questionCategory">
+                    MIXED PRACTICE
+                </div>
+
+                <h2 id="question">
+                    Loading question...
+                </h2>
+
+                <div id="answers" class="answers"></div>
+
+                <div id="feedback"
+                     class="feedback hidden">
+
+                    <div id="feedbackTitle"
+                         class="feedback-title">
+                    </div>
+
+                    <p id="feedbackText"></p>
+
+                </div>
+
+                <button id="nextButton"
+                        class="primary-button next-button hidden">
+                    Next question →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+        <section id="results" class="screen">
+
+            <div class="results-card">
+
+                <p class="eyebrow">
+                    B1 PRACTICE COMPLETE
+                </p>
+
+                <h1>Your result</h1>
+
+                <div class="score-circle">
+                    <span id="score">0/10</span>
+                </div>
+
+                <h2 id="resultMessage">
+                    Great job!
+                </h2>
+
+                <p id="resultDescription">
+                    Keep practising to improve your English.
+                </p>
+
+                <div class="result-stats">
+
+                    <div>
+                        <strong id="resultPercentage">0%</strong>
+                        <span>Accuracy</span>
+                    </div>
+
+                    <div>
+                        <strong id="resultCorrect">0</strong>
+                        <span>Correct</span>
+                    </div>
+
+                    <div>
+                        <strong id="resultQuestions">10</strong>
+                        <span>Questions</span>
+                    </div>
+
+                </div>
+
+                <div class="result-actions">
+
+                    <button id="retryButton"
+                            class="primary-button">
+                        Try again
+                    </button>
+
+                    <button id="practiceAgainButton"
+                            class="secondary-button">
+                        Choose practice
+                    </button>
+
+                    <a href="index.html"
+                       class="secondary-button"
+                       style="text-decoration: none;">
+                        Back to home
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>English Practice · Learn something new every day.</p>
+    </footer>
+
+
+    <script src="b1.js"></script>
+
+</body>
+</html>
