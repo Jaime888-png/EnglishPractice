@@ -70,6 +70,170 @@ const questions = [
         explanation: "For regrets about the past, we use 'wish + past perfect'."
     },
 
+       // =========================
+    // NEW B2 GRAMMAR QUESTIONS
+    // =========================
+
+    {
+        category: "Grammar",
+        question: "I'd rather ___ at home tonight than go to the party.",
+        answers: ["stay", "staying", "to stay", "stayed"],
+        correct: 0,
+        explanation: "'Would rather + infinitive without to' is used to express a preference about what you or someone else should do."
+    },
+
+    {
+        category: "Grammar",
+        question: "She had her laptop ___ after it stopped working properly.",
+        answers: ["repair", "repaired", "repairing", "to repair"],
+        correct: 1,
+        explanation: "'Have + object + past participle' is used when you arrange for someone else to do a service."
+    },
+
+    {
+        category: "Grammar",
+        question: "I can't afford ___ a new phone at the moment.",
+        answers: ["buy", "buying", "to buy", "bought"],
+        correct: 2,
+        explanation: "'Afford' is followed by the to-infinitive: 'afford to do something'."
+    },
+
+    {
+        category: "Grammar",
+        question: "He apologized for ___ so rude during the meeting.",
+        answers: ["be", "being", "to be", "been"],
+        correct: 1,
+        explanation: "After the preposition 'for', we use the -ing form: 'apologize for being'."
+    },
+
+    {
+        category: "Grammar",
+        question: "The students were made ___ their phones during the exam.",
+        answers: ["switch off", "switching off", "to switch off", "switched off"],
+        correct: 2,
+        explanation: "After the passive form of 'make', we use 'to + infinitive': 'were made to switch off'."
+    },
+
+    {
+        category: "Grammar",
+        question: "I don't remember ___ this book before.",
+        answers: ["read", "to read", "reading", "have read"],
+        correct: 2,
+        explanation: "'Remember + -ing' refers to remembering a past action or experience."
+    },
+
+    {
+        category: "Grammar",
+        question: "Don't forget ___ the lights before you leave.",
+        answers: ["turning off", "turn off", "to turn off", "turned off"],
+        correct: 2,
+        explanation: "'Forget + to-infinitive' means that you fail to remember something you need to do."
+    },
+
+    {
+        category: "Grammar",
+        question: "Not only ___ late, but he also forgot to bring the documents.",
+        answers: ["he arrived", "did he arrive", "he did arrive", "arrived he"],
+        correct: 1,
+        explanation: "When 'not only' begins a sentence, we use inversion: 'Not only did he arrive late, but...'."
+    },
+
+    {
+        category: "Grammar",
+        question: "She couldn't help ___ when she heard the joke.",
+        answers: ["laugh", "to laugh", "laughing", "laughed"],
+        correct: 2,
+        explanation: "'Can't/couldn't help + -ing' means that you cannot stop yourself from doing something."
+    },
+
+    {
+        category: "Grammar",
+        question: "It's no use ___ about something you can't change.",
+        answers: ["worry", "to worry", "worrying", "worried"],
+        correct: 2,
+        explanation: "'It's no use + -ing' means that an action will not be useful or effective."
+    },
+
+    {
+        category: "Grammar",
+        question: "The manager insisted that everyone ___ on time.",
+        answers: ["arrives", "arrived", "arrive", "to arrive"],
+        correct: 2,
+        explanation: "After 'insist that', formal English can use the base form of the verb: 'insisted that everyone arrive'."
+    },
+
+    {
+        category: "Grammar",
+        question: "You'd better ___ an umbrella. It looks like rain.",
+        answers: ["take", "to take", "taking", "took"],
+        correct: 0,
+        explanation: "'Had better + infinitive without to' is used to give strong advice about what someone should do."
+    },
+
+    {
+        category: "Grammar",
+        question: "There is ___ milk left in the fridge, so we need to buy some.",
+        answers: ["few", "a few", "little", "a little"],
+        correct: 2,
+        explanation: "'Little' is used with uncountable nouns and means not much. Here, there is not enough milk."
+    },
+
+    {
+        category: "Grammar",
+        question: "Only ___ students managed to answer the most difficult question.",
+        answers: ["little", "a little", "few", "a few"],
+        correct: 2,
+        explanation: "'Few' is used with plural countable nouns and means not many."
+    },
+
+    {
+        category: "Grammar",
+        question: "Neither of the answers ___ correct.",
+        answers: ["are", "were", "is", "have been"],
+        correct: 2,
+        explanation: "'Neither of' is normally followed by a singular verb in standard English: 'Neither of the answers is correct.'"
+    },
+
+    {
+        category: "Grammar",
+        question: "The woman ___ I spoke to yesterday is my new teacher.",
+        answers: ["which", "whose", "who", "where"],
+        correct: 2,
+        explanation: "'Who' can be used as a relative pronoun for people. In this sentence, it refers to 'the woman'."
+    },
+
+    {
+        category: "Grammar",
+        question: "The restaurant ___ we had dinner last night has closed down.",
+        answers: ["which", "where", "who", "whose"],
+        correct: 1,
+        explanation: "'Where' is used to introduce a relative clause referring to a place."
+    },
+
+    {
+        category: "Grammar",
+        question: "I didn't enjoy the film, and ___ did my brother.",
+        answers: ["so", "neither", "either", "nor"],
+        correct: 1,
+        explanation: "'Neither + auxiliary + subject' is used to agree with a negative statement."
+    },
+
+    {
+        category: "Grammar",
+        question: "She works ___ than anyone else in the team.",
+        answers: ["hard", "harder", "more hard", "hardest"],
+        correct: 1,
+        explanation: "The comparative form 'harder' is used when comparing two or more people or things."
+    },
+
+    {
+        category: "Grammar",
+        question: "The sooner we leave, ___ we'll arrive.",
+        answers: ["the early", "earlier", "the earlier", "earliest"],
+        correct: 2,
+        explanation: "The structure 'the + comparative, the + comparative' shows that one change causes another: 'The sooner..., the earlier...'."
+    },
+
 
     // =========================
     // VOCABULARY
