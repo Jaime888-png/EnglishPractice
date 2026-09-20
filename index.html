@@ -4,28 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>English Practice - Free English Tests & Exercises</title>
+    <title>English Practice - Free English Tests & Exercises</title>
 
-<meta name="description"
-content="Improve your English with free B2 grammar, vocabulary, phrasal verb, word formation and exam-style exercises with instant feedback.">
+    <meta name="description"
+          content="Improve your English with free B2 grammar, vocabulary, phrasal verb, word formation and exam-style exercises with instant feedback.">
 
     <meta name="robots" content="index, follow">
- <link rel="canonical" href="https://jaime888-png.github.io/EnglishPractice/">
+
+    <link rel="canonical" href="https://jaime888-png.github.io/EnglishPractice/">
 
     <link rel="stylesheet" href="style.css">
-<meta name="google-site-verification" content="MlaVY_ap902NoAxUZYahT_4EIekP5iTGvNQhcBj-xUs" />
+
+    <meta name="google-site-verification"
+          content="MlaVY_ap902NoAxUZYahT_4EIekP5iTGvNQhcBj-xUs">
 </head>
 
 <body>
 
-    <!-- TOP NAVIGATION -->
+    <!-- ================= TOP NAVIGATION ================= -->
+
     <header class="topbar">
-        <div class="logo">English<span>Practice</span></div>
+
+        <a href="#" class="logo" aria-label="English Practice home">
+            <span class="logo-mark">E</span>
+            <span class="logo-text">English<span>Practice</span></span>
+        </a>
 
         <nav class="nav-links">
-            <button class="nav-button" id="statsNavButton">My Progress</button>
-            <div class="level-badge">B2</div>
+
+            <button class="nav-button" id="statsNavButton">
+                <span class="nav-icon">↗</span>
+                My Progress
+            </button>
+
+            <div class="level-badge">
+                B2
+            </div>
+
         </nav>
+
     </header>
 
 
@@ -35,115 +52,400 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
 
         <section id="home" class="screen active">
 
+            <!-- HERO -->
+
             <div class="hero">
 
-                <p class="eyebrow">ENGLISH PRACTICE</p>
+                <div class="hero-content">
 
-                <h1>
-                    Improve your English.<br>
-                    <span>One question at a time.</span>
-                </h1>
+                    <div class="hero-copy">
 
-                <p class="hero-text">
-                    Practice English with interactive exercises,
-                    instant feedback and progress tracking.
-                </p>
+                        <p class="eyebrow">
+                            FREE ENGLISH PRACTICE
+                        </p>
+
+                        <h1>
+                            Improve your English.
+                            <span>One question at a time.</span>
+                        </h1>
+
+                        <p class="hero-text">
+                            Build your grammar, vocabulary and exam skills
+                            with interactive practice and instant feedback.
+                        </p>
+
+                        <div class="hero-actions">
+
+                            <button
+                                class="primary-button hero-primary"
+                                id="heroStartButton"
+                                onclick="document.getElementById('b2LevelButton').click()">
+                                Start practising
+                                <span>→</span>
+                            </button>
+
+                            <a
+                                href="level-test.html"
+                                class="hero-secondary">
+                                Find my level
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                        <div class="hero-trust">
+
+                            <div class="trust-item">
+                                <span class="trust-dot"></span>
+                                Free to use
+                            </div>
+
+                            <div class="trust-item">
+                                <span class="trust-dot"></span>
+                                Instant feedback
+                            </div>
+
+                            <div class="trust-item">
+                                <span class="trust-dot"></span>
+                                Exam-style practice
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- HERO PRACTICE PREVIEW -->
+
+                    <div class="hero-preview">
+
+                        <div class="preview-glow"></div>
+
+                        <div class="preview-card">
+
+                            <div class="preview-top">
+
+                                <div>
+                                    <span class="preview-label">
+                                        B2 GRAMMAR
+                                    </span>
+
+                                    <span class="preview-question-number">
+                                        Question 04
+                                    </span>
+                                </div>
+
+                                <div class="preview-progress">
+                                    4 / 10
+                                </div>
+
+                            </div>
+
+                            <div class="preview-progress-bar">
+                                <span></span>
+                            </div>
+
+                            <h3>
+                                If I had known about the problem,
+                                I ______ earlier.
+                            </h3>
+
+                            <div class="preview-answer correct-preview">
+                                <span class="preview-radio"></span>
+                                would have acted
+                                <span class="preview-check">✓</span>
+                            </div>
+
+                            <div class="preview-answer">
+                                <span class="preview-radio"></span>
+                                would act
+                            </div>
+
+                            <div class="preview-answer">
+                                <span class="preview-radio"></span>
+                                will have acted
+                            </div>
+
+                            <div class="preview-feedback">
+                                <span>✓</span>
+                                Correct! Keep going.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO STATS -->
+
+                <div class="hero-stats">
+
+                    <div class="hero-stat">
+                        <strong>8</strong>
+                        <span>Practice areas</span>
+                    </div>
+
+                    <div class="hero-stat">
+                        <strong>6</strong>
+                        <span>English levels</span>
+                    </div>
+
+                    <div class="hero-stat">
+                        <strong>∞</strong>
+                        <span>Questions to practise</span>
+                    </div>
+
+                </div>
 
             </div>
 
 
-            <!-- LEVEL SELECTOR -->
+            <!-- ================= LEVEL SELECTOR ================= -->
 
-            <div class="section-block">
+            <section class="content-section level-section">
 
                 <div class="section-heading">
+
                     <div>
-                        <p class="eyebrow">YOUR LEVEL</p>
-                        <h2>Choose your level</h2>
+                        <p class="eyebrow">CHOOSE YOUR LEVEL</p>
+                        <h2>Where are you on your English journey?</h2>
                     </div>
-                </div>
-             <div class="level-grid">
 
-<a href="a1.html" class="level-card available" style="text-decoration: none;">
-    <strong>A1</strong>
-    <span>Beginner</span>
-    <small>Available now →</small>
-</a>
-
-<a href="a2.html" class="level-card available" style="text-decoration: none;">
-    <strong>A2</strong>
-    <span>Elementary</span>
-    <small>Available now →</small>
-</a>
-
-<a href="b1.html" class="level-card available" style="text-decoration: none;">
-    <strong>B1</strong>
-    <span>Intermediate</span>
-    <small>Available now →</small>
-</a>
-
-    <button class="level-card available" id="b2LevelButton">
-        <strong>B2</strong>
-        <span>Upper-intermediate</span>
-        <small>Available now →</small>
-    </button>
-
-<a href="c1.html" class="level-card available" style="text-decoration: none;">
-    <strong>C1</strong>
-    <span>Advanced</span>
-    <small>Available now →</small>
-</a>
-
-<a href="c2.html" class="level-card available" style="text-decoration: none;">
-    <strong>C2</strong>
-    <span>Proficiency</span>
-    <small>Available now →</small>
-</a>
-
-</div>
-
-<div style="text-align: center; margin: 30px 0 10px;">
-    <p style="color: #687287; margin-bottom: 12px;">
-        Not sure which level is right for you?
-    </p>
-
-    <a href="level-test.html"
-       class="primary-button"
-       style="text-decoration: none; display: inline-block;">
-        🎯 Find Your English Level →
-    </a>
-</div>
-
-
-            <!-- FEATURES -->
-
-            <div class="features">
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Focused practice</h3>
-                    <p>
-                        Practise the areas of English that matter most.
+                    <p class="section-description">
+                        Choose a level to start practising.
                     </p>
+
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Instant feedback</h3>
+
+                <div class="level-grid">
+
+                    <a href="a1.html"
+                       class="level-card available"
+                       style="text-decoration: none;">
+
+                        <div class="level-card-top">
+                            <strong>A1</strong>
+                            <span class="level-arrow">↗</span>
+                        </div>
+
+                        <span>Beginner</span>
+
+                        <small>
+                            Start from the basics
+                        </small>
+
+                    </a>
+
+
+                    <a href="a2.html"
+                       class="level-card available"
+                       style="text-decoration: none;">
+
+                        <div class="level-card-top">
+                            <strong>A2</strong>
+                            <span class="level-arrow">↗</span>
+                        </div>
+
+                        <span>Elementary</span>
+
+                        <small>
+                            Build everyday English
+                        </small>
+
+                    </a>
+
+
+                    <a href="b1.html"
+                       class="level-card available"
+                       style="text-decoration: none;">
+
+                        <div class="level-card-top">
+                            <strong>B1</strong>
+                            <span class="level-arrow">↗</span>
+                        </div>
+
+                        <span>Intermediate</span>
+
+                        <small>
+                            Become more confident
+                        </small>
+
+                    </a>
+
+
+                    <button
+                        class="level-card available active-level"
+                        id="b2LevelButton">
+
+                        <div class="level-card-top">
+                            <strong>B2</strong>
+                            <span class="level-arrow">→</span>
+                        </div>
+
+                        <span>Upper-intermediate</span>
+
+                        <small>
+                            Start practising now
+                        </small>
+
+                        <div class="active-level-label">
+                            Current level
+                        </div>
+
+                    </button>
+
+
+                    <a href="c1.html"
+                       class="level-card available"
+                       style="text-decoration: none;">
+
+                        <div class="level-card-top">
+                            <strong>C1</strong>
+                            <span class="level-arrow">↗</span>
+                        </div>
+
+                        <span>Advanced</span>
+
+                        <small>
+                            Master complex English
+                        </small>
+
+                    </a>
+
+
+                    <a href="c2.html"
+                       class="level-card available"
+                       style="text-decoration: none;">
+
+                        <div class="level-card-top">
+                            <strong>C2</strong>
+                            <span class="level-arrow">↗</span>
+                        </div>
+
+                        <span>Proficiency</span>
+
+                        <small>
+                            Reach full proficiency
+                        </small>
+
+                    </a>
+
+                </div>
+
+
+                <div class="level-test-banner">
+
+                    <div class="level-test-icon">
+                        ✦
+                    </div>
+
+                    <div class="level-test-content">
+
+                        <strong>Not sure about your level?</strong>
+
+                        <p>
+                            Take a quick test and find the English level
+                            that fits you best.
+                        </p>
+
+                    </div>
+
+                    <a href="level-test.html"
+                       class="secondary-button level-test-button">
+                        Find my level →
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= FEATURES ================= -->
+
+            <section class="content-section">
+
+                <div class="section-heading centered-heading">
+
+                    <p class="eyebrow">WHY ENGLISH PRACTICE?</p>
+
+                    <h2>
+                        Practice with purpose.
+                    </h2>
+
                     <p>
-                        Understand your mistakes immediately.
+                        Everything you need to turn mistakes into progress.
                     </p>
+
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3>Track your progress</h3>
-                    <p>
-                        See how your English improves over time.
-                    </p>
+
+                <div class="features">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon feature-blue">
+                            🎯
+                        </div>
+
+                        <div>
+                            <h3>Focused practice</h3>
+
+                            <p>
+                                Choose exactly what you want to improve,
+                                from grammar to word formation.
+                            </p>
+                        </div>
+
+                        <span class="feature-number">01</span>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon feature-green">
+                            ⚡
+                        </div>
+
+                        <div>
+                            <h3>Instant feedback</h3>
+
+                            <p>
+                                See whether your answer is correct and
+                                understand your mistakes immediately.
+                            </p>
+                        </div>
+
+                        <span class="feature-number">02</span>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon feature-purple">
+                            📈
+                        </div>
+
+                        <div>
+                            <h3>Track your progress</h3>
+
+                            <p>
+                                Keep an eye on your accuracy, best scores,
+                                streaks and achievements.
+                            </p>
+                        </div>
+
+                        <span class="feature-number">03</span>
+
+                    </div>
+
                 </div>
 
-            </div>
+            </section>
 
         </section>
 
@@ -152,177 +454,384 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
 
         <section id="practiceMenu" class="screen">
 
-            <div class="page-header">
+            <div class="page-header practice-page-header">
 
                 <button id="practiceHomeButton" class="back-button">
                     ← Home
                 </button>
 
-                <p class="eyebrow">B2 ENGLISH</p>
+                <div class="page-header-content">
 
-                <h1>What do you want to practise?</h1>
+                    <div>
+                        <p class="eyebrow">B2 ENGLISH</p>
 
-                <p>
-                    Choose an area and start practising.
-                </p>
+                        <h1>
+                            What do you want to practise?
+                        </h1>
 
-            </div>
+                        <p>
+                            Choose a skill and start improving.
+                        </p>
+                    </div>
 
+                    <div class="page-level-pill">
+                        B2
+                    </div>
 
-            <!-- CATEGORIES -->
-
-            <div class="practice-grid">
-
-<button class="practice-card" data-category="Grammar">
-    <span class="practice-icon">📘</span>
-    <strong>Grammar</strong>
-    <small>Tenses, conditionals, modals and more</small>
-</button>
-
-<button class="practice-card" data-category="Vocabulary">
-    <span class="practice-icon">📚</span>
-    <strong>Vocabulary</strong>
-    <small>Words, meaning and usage</small>
-</button>
-
-<button class="practice-card" data-category="Phrasal Verbs">
-    <span class="practice-icon">🔗</span>
-    <strong>Phrasal Verbs</strong>
-    <small>Common B2 phrasal verbs</small>
-</button>
-
-                <button class="practice-card" data-category="Collocations">
-                    <span class="practice-icon">🧩</span>
-                    <strong>Collocations</strong>
-                    <small>Words that naturally go together</small>
-                </button>
-
-                <button class="practice-card" data-category="Word Formation">
-                    <span class="practice-icon">🔤</span>
-                    <strong>Word Formation</strong>
-                    <small>Build the correct word</small>
-                </button>
-
-                <button class="practice-card" data-category="Open Cloze">
-                    <span class="practice-icon">✏️</span>
-                    <strong>Open Cloze</strong>
-                    <small>Complete the missing words</small>
-                </button>
-
-                <button class="practice-card" data-category="Key Word Transformations">
-                    <span class="practice-icon">🔄</span>
-                    <strong>Key Word Transformations</strong>
-                    <small>Rewrite sentences correctly</small>
-                </button>
-                
-                <button class="practice-card featured" id="errorCoachButton">
-    <span class="practice-icon">🧠</span>
-    <strong>Error Coach</strong>
-    <small>Turn your mistakes into personalised practice</small>
-</button>
-
-                <button class="practice-card featured" data-category="Mixed Practice">
-                    <span class="practice-icon">🎲</span>
-                    <strong>Mixed Practice</strong>
-                    <small>A mixture of B2 questions</small>
-                </button>
+                </div>
 
             </div>
 
 
-<!-- B2 ENGLISH PRACTICE LINKS -->
+            <!-- PRACTICE CATEGORIES -->
 
-<div style="text-align: center; padding: 10px 0 45px;">
+            <div class="practice-section">
 
-    <p class="eyebrow">B2 ENGLISH PRACTICE</p>
+                <div class="section-heading compact-heading">
 
-    <h2 style="font-size: 24px; margin-bottom: 10px;">
-        Explore B2 English exercises
-    </h2>
+                    <div>
+                        <p class="eyebrow">PRACTICE AREAS</p>
+                        <h2>Choose a skill</h2>
+                    </div>
 
-    <p style="color: #687287; line-height: 1.6; margin-bottom: 22px;">
-        Choose a specific area of English and practise with dedicated exercises.
-    </p>
+                    <span class="practice-count">
+                        8 areas
+                    </span>
 
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                </div>
 
-        <a href="grammar.html"
-           class="secondary-button"
-           style="text-decoration: none;">
-            Grammar
-        </a>
 
-        <a href="vocabulary.html"
-           class="secondary-button"
-           style="text-decoration: none;">
-            Vocabulary
-        </a>
+                <div class="practice-grid">
 
-        <a href="phrasal-verbs.html"
-           class="secondary-button"
-           style="text-decoration: none;">
-            Phrasal Verbs
-        </a>
+                    <button
+                        class="practice-card"
+                        data-category="Grammar">
 
-        <a href="collocations.html"
-           class="secondary-button"
-           style="text-decoration: none;">
-            Collocations
-        </a>
+                        <span class="practice-icon">📘</span>
 
-        <a href="word-formation.html"
-           class="secondary-button"
-           style="text-decoration: none;">
-            Word Formation
-        </a>
+                        <div class="practice-card-content">
+                            <strong>Grammar</strong>
 
-        <a href="open-cloze.html"
-           class="secondary-button"
-           style="text-decoration: none;">
-            Open Cloze
-        </a>
+                            <small>
+                                Tenses, conditionals, modals and more
+                            </small>
+                        </div>
 
-        <a href="key-word-transformations.html"
-           class="secondary-button"
-           style="text-decoration: none;">
-            Key Word Transformations
-        </a>
+                        <span class="practice-arrow">→</span>
 
-    </div>
+                    </button>
 
-</div>
+
+                    <button
+                        class="practice-card"
+                        data-category="Vocabulary">
+
+                        <span class="practice-icon">📚</span>
+
+                        <div class="practice-card-content">
+                            <strong>Vocabulary</strong>
+
+                            <small>
+                                Words, meaning and usage
+                            </small>
+                        </div>
+
+                        <span class="practice-arrow">→</span>
+
+                    </button>
+
+
+                    <button
+                        class="practice-card"
+                        data-category="Phrasal Verbs">
+
+                        <span class="practice-icon">🔗</span>
+
+                        <div class="practice-card-content">
+                            <strong>Phrasal Verbs</strong>
+
+                            <small>
+                                Common B2 phrasal verbs
+                            </small>
+                        </div>
+
+                        <span class="practice-arrow">→</span>
+
+                    </button>
+
+
+                    <button
+                        class="practice-card"
+                        data-category="Collocations">
+
+                        <span class="practice-icon">🧩</span>
+
+                        <div class="practice-card-content">
+                            <strong>Collocations</strong>
+
+                            <small>
+                                Words that naturally go together
+                            </small>
+                        </div>
+
+                        <span class="practice-arrow">→</span>
+
+                    </button>
+
+
+                    <button
+                        class="practice-card"
+                        data-category="Word Formation">
+
+                        <span class="practice-icon">🔤</span>
+
+                        <div class="practice-card-content">
+                            <strong>Word Formation</strong>
+
+                            <small>
+                                Build the correct word
+                            </small>
+                        </div>
+
+                        <span class="practice-arrow">→</span>
+
+                    </button>
+
+
+                    <button
+                        class="practice-card"
+                        data-category="Open Cloze">
+
+                        <span class="practice-icon">✏️</span>
+
+                        <div class="practice-card-content">
+                            <strong>Open Cloze</strong>
+
+                            <small>
+                                Complete the missing words
+                            </small>
+                        </div>
+
+                        <span class="practice-arrow">→</span>
+
+                    </button>
+
+
+                    <button
+                        class="practice-card"
+                        data-category="Key Word Transformations">
+
+                        <span class="practice-icon">🔄</span>
+
+                        <div class="practice-card-content">
+                            <strong>Key Word Transformations</strong>
+
+                            <small>
+                                Rewrite sentences correctly
+                            </small>
+                        </div>
+
+                        <span class="practice-arrow">→</span>
+
+                    </button>
+
+
+                    <!-- ERROR COACH -->
+
+                    <button
+                        class="practice-card featured error-coach-card"
+                        id="errorCoachButton">
+
+                        <div class="featured-card-glow"></div>
+
+                        <span class="practice-icon">🧠</span>
+
+                        <div class="practice-card-content">
+
+                            <div class="featured-label">
+                                PERSONALIZED
+                            </div>
+
+                            <strong>Error Coach</strong>
+
+                            <small>
+                                Turn your mistakes into personalised practice
+                            </small>
+
+                        </div>
+
+                        <span class="practice-arrow">→</span>
+
+                    </button>
+
+
+                    <!-- MIXED PRACTICE -->
+
+                    <button
+                        class="practice-card featured mixed-card"
+                        data-category="Mixed Practice">
+
+                        <span class="practice-icon">🎲</span>
+
+                        <div class="practice-card-content">
+
+                            <div class="featured-label">
+                                RECOMMENDED
+                            </div>
+
+                            <strong>Mixed Practice</strong>
+
+                            <small>
+                                A mixture of B2 questions
+                            </small>
+
+                        </div>
+
+                        <span class="practice-arrow">→</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- B2 EXERCISES -->
+
+            <div class="exercise-links-section">
+
+                <div class="section-heading compact-heading centered-heading">
+
+                    <p class="eyebrow">B2 ENGLISH PRACTICE</p>
+
+                    <h2>
+                        Explore dedicated exercises
+                    </h2>
+
+                    <p>
+                        Go directly to a specific area of B2 English.
+                    </p>
+
+                </div>
+
+
+                <div class="exercise-links">
+
+                    <a href="grammar.html" class="exercise-link">
+                        Grammar
+                        <span>↗</span>
+                    </a>
+
+                    <a href="vocabulary.html" class="exercise-link">
+                        Vocabulary
+                        <span>↗</span>
+                    </a>
+
+                    <a href="phrasal-verbs.html" class="exercise-link">
+                        Phrasal Verbs
+                        <span>↗</span>
+                    </a>
+
+                    <a href="collocations.html" class="exercise-link">
+                        Collocations
+                        <span>↗</span>
+                    </a>
+
+                    <a href="word-formation.html" class="exercise-link">
+                        Word Formation
+                        <span>↗</span>
+                    </a>
+
+                    <a href="open-cloze.html" class="exercise-link">
+                        Open Cloze
+                        <span>↗</span>
+                    </a>
+
+                    <a href="key-word-transformations.html" class="exercise-link">
+                        Key Word Transformations
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
 
 
             <!-- QUIZ LENGTH -->
 
             <div class="practice-options">
 
+                <div class="section-heading compact-heading">
 
-                <p class="eyebrow">QUIZ LENGTH</p>
+                    <div>
+                        <p class="eyebrow">QUIZ LENGTH</p>
+                        <h2>How much time do you have?</h2>
+                    </div>
+
+                </div>
+
 
                 <div class="length-buttons">
 
-                    <button class="length-button" data-length="5">
+                    <button
+                        class="length-button"
+                        data-length="5">
+
                         <strong>Quick</strong>
+
                         <span>5 questions</span>
+
+                        <small>~ 3 min</small>
+
                     </button>
 
-                    <button class="length-button selected" data-length="10">
+
+                    <button
+                        class="length-button selected"
+                        data-length="10">
+
                         <strong>Standard</strong>
+
                         <span>10 questions</span>
+
+                        <small>~ 7 min</small>
+
                     </button>
 
-                    <button class="length-button" data-length="20">
+
+                    <button
+                        class="length-button"
+                        data-length="20">
+
                         <strong>Challenge</strong>
+
                         <span>20 questions</span>
+
+                        <small>~ 15 min</small>
+
                     </button>
 
                 </div>
 
             </div>
-<button id="startPracticeButton" class="primary-button">
-    Start practice →
-</button>
+
+
+            <div class="start-practice-wrapper">
+
+                <button
+                    id="startPracticeButton"
+                    class="primary-button start-practice-button">
+
+                    Start practice
+                    <span>→</span>
+
+                </button>
+
+                <p>
+                    Instant feedback after every question.
+                </p>
+
+            </div>
 
         </section>
 
@@ -340,12 +849,21 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
                 <div class="progress-container">
 
                     <div class="progress-text">
-                        <span id="questionNumber">Question 1</span>
-                        <span id="totalQuestions">1 / 10</span>
+
+                        <span id="questionNumber">
+                            Question 1
+                        </span>
+
+                        <span id="totalQuestions">
+                            1 / 10
+                        </span>
+
                     </div>
 
                     <div class="progress-bar">
+
                         <div id="progress" class="progress"></div>
+
                     </div>
 
                 </div>
@@ -355,30 +873,54 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
 
             <div class="quiz-card">
 
-                <div class="question-category" id="questionCategory">
-                    MIXED PRACTICE
+                <div class="quiz-card-top">
+
+                    <div
+                        class="question-category"
+                        id="questionCategory">
+
+                        MIXED PRACTICE
+
+                    </div>
+
+                    <span class="quiz-level">
+                        B2
+                    </span>
+
                 </div>
+
 
                 <h2 id="question">
                     Loading question...
                 </h2>
 
+
                 <div id="answers" class="answers">
                     <!-- JavaScript inserts answers here -->
                 </div>
 
-                <div id="feedback" class="feedback hidden">
 
-                    <div id="feedbackTitle" class="feedback-title"></div>
+                <div
+                    id="feedback"
+                    class="feedback hidden">
+
+                    <div
+                        id="feedbackTitle"
+                        class="feedback-title">
+                    </div>
 
                     <p id="feedbackText"></p>
 
                 </div>
 
+
                 <button
                     id="nextButton"
                     class="primary-button next-button hidden">
-                    Next question →
+
+                    Next question
+                    <span>→</span>
+
                 </button>
 
             </div>
@@ -392,12 +934,24 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
 
             <div class="results-card">
 
-                <p class="eyebrow">PRACTICE COMPLETE</p>
+                <div class="result-icon">
+                    ✦
+                </div>
 
-                <h1>Your result</h1>
+                <p class="eyebrow">
+                    PRACTICE COMPLETE
+                </p>
+
+                <h1>
+                    Your result
+                </h1>
 
                 <div class="score-circle">
-                    <span id="score">0/10</span>
+
+                    <span id="score">
+                        0/10
+                    </span>
+
                 </div>
 
                 <h2 id="resultMessage">
@@ -412,18 +966,33 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
                 <div class="result-stats">
 
                     <div>
-                        <strong id="resultPercentage">0%</strong>
-                        <span>Accuracy</span>
+                        <strong id="resultPercentage">
+                            0%
+                        </strong>
+
+                        <span>
+                            Accuracy
+                        </span>
                     </div>
 
                     <div>
-                        <strong id="resultCorrect">0</strong>
-                        <span>Correct</span>
+                        <strong id="resultCorrect">
+                            0
+                        </strong>
+
+                        <span>
+                            Correct
+                        </span>
                     </div>
 
                     <div>
-                        <strong id="resultQuestions">10</strong>
-                        <span>Questions</span>
+                        <strong id="resultQuestions">
+                            10
+                        </strong>
+
+                        <span>
+                            Questions
+                        </span>
                     </div>
 
                 </div>
@@ -431,16 +1000,31 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
 
                 <div class="result-actions">
 
-                    <button id="retryButton" class="primary-button">
+                    <button
+                        id="retryButton"
+                        class="primary-button">
+
                         Try again
+                        <span>↻</span>
+
                     </button>
 
-                    <button id="practiceAgainButton" class="secondary-button">
+
+                    <button
+                        id="practiceAgainButton"
+                        class="secondary-button">
+
                         Choose practice
+
                     </button>
 
-                    <button id="homeButton" class="secondary-button">
+
+                    <button
+                        id="homeButton"
+                        class="secondary-button">
+
                         Back to home
+
                     </button>
 
                 </div>
@@ -456,13 +1040,21 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
 
             <div class="page-header">
 
-                <button id="statsHomeButton" class="back-button">
+                <button
+                    id="statsHomeButton"
+                    class="back-button">
+
                     ← Home
+
                 </button>
 
-                <p class="eyebrow">YOUR PROGRESS</p>
+                <p class="eyebrow">
+                    YOUR PROGRESS
+                </p>
 
-                <h1>Keep getting better.</h1>
+                <h1>
+                    Keep getting better.
+                </h1>
 
                 <p>
                     Your progress is saved automatically on this device.
@@ -474,27 +1066,70 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
             <div class="stats-grid">
 
                 <div class="stat-card">
-                    <span class="stat-icon">📝</span>
-                    <strong id="statQuestions">0</strong>
-                    <span>Questions answered</span>
+
+                    <span class="stat-icon">
+                        📝
+                    </span>
+
+                    <strong id="statQuestions">
+                        0
+                    </strong>
+
+                    <span>
+                        Questions answered
+                    </span>
+
                 </div>
 
-                <div class="stat-card">
-                    <span class="stat-icon">🎯</span>
-                    <strong id="statAccuracy">0%</strong>
-                    <span>Overall accuracy</span>
-                </div>
 
                 <div class="stat-card">
-                    <span class="stat-icon">🏆</span>
-                    <strong id="statBestScore">0%</strong>
-                    <span>Best result</span>
+
+                    <span class="stat-icon">
+                        🎯
+                    </span>
+
+                    <strong id="statAccuracy">
+                        0%
+                    </strong>
+
+                    <span>
+                        Overall accuracy
+                    </span>
+
                 </div>
 
+
                 <div class="stat-card">
-                    <span class="stat-icon">🔥</span>
-                    <strong id="statStreak">0</strong>
-                    <span>Day streak</span>
+
+                    <span class="stat-icon">
+                        🏆
+                    </span>
+
+                    <strong id="statBestScore">
+                        0%
+                    </strong>
+
+                    <span>
+                        Best result
+                    </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">
+                        🔥
+                    </span>
+
+                    <strong id="statStreak">
+                        0
+                    </strong>
+
+                    <span>
+                        Day streak
+                    </span>
+
                 </div>
 
             </div>
@@ -502,10 +1137,27 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
 
             <div class="progress-section">
 
-                <p class="eyebrow">ACHIEVEMENTS</p>
+                <div class="section-heading">
 
-                <div id="achievements" class="achievements-grid">
+                    <div>
+                        <p class="eyebrow">
+                            ACHIEVEMENTS
+                        </p>
+
+                        <h2>
+                            Your milestones
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="achievements"
+                    class="achievements-grid">
+
                     <!-- JavaScript inserts achievements -->
+
                 </div>
 
             </div>
@@ -515,64 +1167,117 @@ content="Improve your English with free B2 grammar, vocabulary, phrasal verb, wo
     </main>
 
 
+    <!-- ================= FOOTER ================= -->
+
     <footer>
-        <p>English Practice · Learn something new every day.</p>
+
+        <div class="footer-inner">
+
+            <div class="footer-logo">
+                English<span>Practice</span>
+            </div>
+
+            <p>
+                Learn something new every day.
+            </p>
+
+        </div>
+
     </footer>
+
 
     <!-- ================= PRO MODAL ================= -->
 
-<div id="proModal" class="pro-modal" style="display: none;">
+    <div
+        id="proModal"
+        class="pro-modal"
+        style="display: none;">
 
-    <div class="pro-modal-content">
+        <div class="pro-modal-content">
 
-        <button id="closeProModal" class="pro-modal-close">
-            ×
-        </button>
+            <button
+                id="closeProModal"
+                class="pro-modal-close"
+                aria-label="Close">
 
-        <div class="icon">🔒</div>
+                ×
 
-        <p class="eyebrow">ERROR COACH PRO</p>
+            </button>
 
-        <h2>Unlock your full English potential.</h2>
 
-        <p>
-            Get access to all English levels from A1 to C2,
-            plus personalised practice with Special Weakness.
-        </p>
+            <div class="pro-modal-icon">
+                🧠
+            </div>
 
-        <div class="pro-features">
 
-            <p>✓ A1, A2, B1, B2, C1 & C2</p>
-            <p>✓ Special Weakness</p>
-            <p>✓ Personalised practice</p>
-            <p>✓ Progress tracking</p>
+            <p class="eyebrow">
+                ERROR COACH PRO
+            </p>
+
+
+            <h2>
+                Unlock your full English potential.
+            </h2>
+
+
+            <p>
+                Get access to all English levels from A1 to C2,
+                plus personalised practice with Special Weakness.
+            </p>
+
+
+            <div class="pro-features">
+
+                <p>✓ A1, A2, B1, B2, C1 & C2</p>
+                <p>✓ Special Weakness</p>
+                <p>✓ Personalised practice</p>
+                <p>✓ Progress tracking</p>
+
+            </div>
+
+
+            <div class="pro-price">
+
+                <strong>€4.99</strong>
+
+                <span>
+                    / month
+                </span>
+
+            </div>
+
+
+            <button
+                id="unlockProButton"
+                class="primary-button">
+
+                Unlock Pro →
+            </button>
+
+
+            <button
+                id="laterProButton"
+                class="secondary-button">
+
+                Maybe later
+
+            </button>
 
         </div>
-
-        <div class="pro-price">
-            <strong>€4.99</strong>
-            <span>/ month</span>
-        </div>
-
-        <button id="unlockProButton" class="primary-button">
-            Unlock Pro →
-        </button>
-
-        <button id="laterProButton" class="secondary-button">
-            Maybe later
-        </button>
 
     </div>
 
-</div>
-
 
     <script src="script.js"></script>
-<script>
-document.getElementById("errorCoachButton").addEventListener("click", function() {
-    window.location.href = "error-coach.html";
-});
-</script>
+
+    <script>
+        document
+            .getElementById("errorCoachButton")
+            .addEventListener("click", function() {
+                window.location.href = "error-coach.html";
+            });
+    </script>
+
 </body>
 </html>
       
