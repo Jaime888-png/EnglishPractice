@@ -4,16 +4,22 @@
 
 let selectedCategory = "Mixed Practice";
 let selectedLength = 10;
+
 // ===============================
-// URL CATEGORY
+// URL PARAMETERS
 // ===============================
 
 const urlParams = new URLSearchParams(window.location.search);
 const categoryFromURL = urlParams.get("category");
+const coachMode = urlParams.get("coach") === "1";
 
 if (categoryFromURL) {
     selectedCategory = categoryFromURL;
 }
+
+// ===============================
+// QUIZ STATE
+// ===============================
 
 let currentQuestions = [];
 let currentQuestionIndex = 0;
@@ -70,7 +76,7 @@ const questions = [
         explanation: "For regrets about the past, we use 'wish + past perfect'."
     },
 
-       // =========================
+    // =========================
     // NEW B2 GRAMMAR QUESTIONS
     // =========================
 
@@ -234,7 +240,6 @@ const questions = [
         explanation: "The structure 'the + comparative, the + comparative' shows that one change causes another: 'The sooner..., the earlier...'."
     },
 
-
     // =========================
     // VOCABULARY
     // =========================
@@ -278,7 +283,6 @@ const questions = [
         correct: 0,
         explanation: "A discovery is something found or learned, especially through research."
     },
-
 
     // =========================
     // PHRASAL VERBS
@@ -324,7 +328,6 @@ const questions = [
         explanation: "'Call off' means to cancel something."
     },
 
-
     // =========================
     // COLLOCATIONS
     // =========================
@@ -368,7 +371,6 @@ const questions = [
         correct: 0,
         explanation: "'Have a close relationship with' is the natural collocation."
     },
-
 
     // =========================
     // WORD FORMATION
@@ -414,7 +416,6 @@ const questions = [
         explanation: "The context requires the noun 'unemployment'."
     },
 
-
     // =========================
     // OPEN CLOZE
     // =========================
@@ -458,7 +459,6 @@ const questions = [
         correct: 0,
         explanation: "The correct expression is 'apologize for + -ing'."
     },
-
 
     // =========================
     // KEY WORD TRANSFORMATIONS
@@ -504,7 +504,6 @@ const questions = [
         explanation: "For regrets about the past, we use 'wish + past perfect'."
     },
 
-
     // =========================
     // MIXED PRACTICE
     // =========================
@@ -548,6 +547,11 @@ const questions = [
         correct: 0,
         explanation: "'Turn down' means to reject an offer."
     },
+
+    // =========================
+    // ADDITIONAL GRAMMAR
+    // =========================
+
     {
         category: "Grammar",
         question: "By the time we arrived, the film ___ already started.",
@@ -555,6 +559,7 @@ const questions = [
         correct: 1,
         explanation: "The past perfect 'had started' is used for an action that happened before another past action."
     },
+
     {
         category: "Grammar",
         question: "I wish I ___ more time to finish the project yesterday.",
@@ -562,6 +567,7 @@ const questions = [
         correct: 3,
         explanation: "For a regret about a past situation, we use 'wish + past perfect': 'I wish I had had more time.'"
     },
+
     {
         category: "Grammar",
         question: "She ___ to work by bus every day, but now she cycles.",
@@ -569,6 +575,7 @@ const questions = [
         correct: 0,
         explanation: "'Used to + infinitive' describes a past habit or situation that is no longer true."
     },
+
     {
         category: "Grammar",
         question: "If I ___ about the meeting, I would have attended it.",
@@ -576,6 +583,7 @@ const questions = [
         correct: 1,
         explanation: "This is a third conditional: 'if + past perfect' followed by 'would have + past participle'."
     },
+
     {
         category: "Grammar",
         question: "The new bridge ___ by the end of next year.",
@@ -583,6 +591,7 @@ const questions = [
         correct: 2,
         explanation: "The future perfect passive 'will have been completed' describes something that will be finished by a future time."
     },
+
     {
         category: "Grammar",
         question: "You ___ have told me earlier. I could have helped you.",
@@ -590,6 +599,7 @@ const questions = [
         correct: 0,
         explanation: "'Should have + past participle' is used to say that something was the better or expected thing to do in the past."
     },
+
     {
         category: "Grammar",
         question: "Despite ___ very tired, he continued working.",
@@ -597,6 +607,7 @@ const questions = [
         correct: 1,
         explanation: "'Despite' is followed by a noun, pronoun or gerund (-ing form), not an infinitive."
     },
+
     {
         category: "Grammar",
         question: "I haven't seen Maria ___ she moved to London.",
@@ -604,6 +615,7 @@ const questions = [
         correct: 2,
         explanation: "'Since' introduces the point in time when an action or situation began."
     },
+
     {
         category: "Grammar",
         question: "The teacher suggested ___ the exercise again.",
@@ -611,6 +623,7 @@ const questions = [
         correct: 1,
         explanation: "'Suggest' is normally followed by a gerund when referring to an activity: 'suggest doing something'."
     },
+
     {
         category: "Grammar",
         question: "He denied ___ the window.",
@@ -618,6 +631,7 @@ const questions = [
         correct: 2,
         explanation: "'Deny' is followed by a gerund: 'deny doing something'."
     },
+
     {
         category: "Grammar",
         question: "We ___ dinner when the lights suddenly went out.",
@@ -625,6 +639,7 @@ const questions = [
         correct: 2,
         explanation: "The past continuous describes an action that was in progress when another past event occurred."
     },
+
     {
         category: "Grammar",
         question: "I'd rather you ___ me before making that decision.",
@@ -632,6 +647,7 @@ const questions = [
         correct: 1,
         explanation: "'Would rather + subject + past simple' is used to express a preference about another person's action."
     },
+
     {
         category: "Grammar",
         question: "It's high time we ___ home.",
@@ -639,6 +655,7 @@ const questions = [
         correct: 1,
         explanation: "'It's high time + past simple' is used to say that something should happen now or very soon."
     },
+
     {
         category: "Grammar",
         question: "The book, ___ was published last year, has become a bestseller.",
@@ -646,6 +663,7 @@ const questions = [
         correct: 2,
         explanation: "'Which' is used as a relative pronoun to refer to things."
     },
+
     {
         category: "Grammar",
         question: "The woman ___ car was stolen reported it to the police.",
@@ -653,6 +671,7 @@ const questions = [
         correct: 1,
         explanation: "'Whose' expresses possession in a relative clause."
     },
+
     {
         category: "Grammar",
         question: "You won't pass the exam unless you ___ harder.",
@@ -660,6 +679,7 @@ const questions = [
         correct: 2,
         explanation: "In a first conditional, the 'unless' clause uses the present simple to refer to a future condition."
     },
+
     {
         category: "Grammar",
         question: "She asked me where ___ the previous evening.",
@@ -667,6 +687,7 @@ const questions = [
         correct: 0,
         explanation: "In reported questions, we use normal statement word order. The past perfect fits the earlier past event."
     },
+
     {
         category: "Grammar",
         question: "He is believed ___ one of the best players in the country.",
@@ -674,6 +695,7 @@ const questions = [
         correct: 1,
         explanation: "After 'is believed', we use the infinitive: 'He is believed to be...'"
     },
+
     {
         category: "Grammar",
         question: "I regret ___ you that your application was unsuccessful.",
@@ -681,6 +703,7 @@ const questions = [
         correct: 1,
         explanation: "'Regret to + infinitive' is commonly used when giving bad news."
     },
+
     {
         category: "Grammar",
         question: "I regret ___ so much money on something I didn't need.",
@@ -688,6 +711,7 @@ const questions = [
         correct: 2,
         explanation: "'Regret + -ing' refers to being sorry about something that happened in the past."
     },
+
     {
         category: "Grammar",
         question: "You needn't ___ all the food. There will be plenty for everyone.",
@@ -695,6 +719,7 @@ const questions = [
         correct: 2,
         explanation: "After the modal 'needn't', we use the base form of the verb: 'needn't buy'."
     },
+
     {
         category: "Grammar",
         question: "The house needs ___ before we can move in.",
@@ -702,6 +727,7 @@ const questions = [
         correct: 2,
         explanation: "'Need + -ing' can have a passive meaning: 'The house needs painting' means it needs to be painted."
     },
+
     {
         category: "Grammar",
         question: "No sooner ___ the train than it started to rain.",
@@ -709,6 +735,7 @@ const questions = [
         correct: 1,
         explanation: "After 'no sooner' at the beginning of a sentence, we use inversion: 'No sooner had we left...'"
     },
+
     {
         category: "Grammar",
         question: "Had I known about the problem, I ___ you.",
@@ -716,6 +743,7 @@ const questions = [
         correct: 1,
         explanation: "'Had I known' is an inverted third conditional meaning 'If I had known'."
     },
+
     {
         category: "Grammar",
         question: "By this time tomorrow, we ___ on the beach.",
@@ -724,209 +752,471 @@ const questions = [
         explanation: "The future continuous describes an action that will be in progress at a particular time in the future."
     },
 
-{
-    category: "Vocabulary",
-    question: "The company decided to ___ a new product next month.",
-    answers: ["launch", "throw", "set", "raise"],
-    correct: 0,
-    explanation: "\"Launch a product\" means to officially introduce it to the market."
-},
+    // =========================
+    // ADDITIONAL VOCABULARY
+    // =========================
 
-{
-    category: "Vocabulary",
-    question: "I was completely ___ by the amount of homework we were given.",
-    answers: ["overwhelmed", "overturned", "overlooked", "overcharged"],
-    correct: 0,
-    explanation: "\"Overwhelmed\" means feeling that something is too much to deal with."
-},
+    {
+        category: "Vocabulary",
+        question: "The company decided to ___ a new product next month.",
+        answers: ["launch", "throw", "set", "raise"],
+        correct: 0,
+        explanation: "\"Launch a product\" means to officially introduce it to the market."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The teacher asked us to ___ attention to the instructions.",
-    answers: ["make", "give", "pay", "take"],
-    correct: 2,
-    explanation: "The correct expression is \"pay attention\"."
-},
+    {
+        category: "Vocabulary",
+        question: "I was completely ___ by the amount of homework we were given.",
+        answers: ["overwhelmed", "overturned", "overlooked", "overcharged"],
+        correct: 0,
+        explanation: "\"Overwhelmed\" means feeling that something is too much to deal with."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The hotel is within walking ___ of the city centre.",
-    answers: ["distance", "length", "space", "range"],
-    correct: 0,
-    explanation: "\"Within walking distance\" means close enough to walk to."
-},
+    {
+        category: "Vocabulary",
+        question: "The teacher asked us to ___ attention to the instructions.",
+        answers: ["make", "give", "pay", "take"],
+        correct: 2,
+        explanation: "The correct expression is \"pay attention\"."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The company is trying to ___ its costs without reducing the quality of its products.",
-    answers: ["reduce", "decline", "remove", "decrease"],
-    correct: 0,
-    explanation: "\"Reduce costs\" means to make the costs lower."
-},
+    {
+        category: "Vocabulary",
+        question: "The hotel is within walking ___ of the city centre.",
+        answers: ["distance", "length", "space", "range"],
+        correct: 0,
+        explanation: "\"Within walking distance\" means close enough to walk to."
+    },
 
-{
-    category: "Vocabulary",
-    question: "She has always been very ___ of her younger brother.",
-    answers: ["supportive", "dependent", "reliable", "responsible"],
-    correct: 0,
-    explanation: "\"Supportive of someone\" means giving them encouragement and help."
-},
+    {
+        category: "Vocabulary",
+        question: "The company is trying to ___ its costs without reducing the quality of its products.",
+        answers: ["reduce", "decline", "remove", "decrease"],
+        correct: 0,
+        explanation: "\"Reduce costs\" means to make the costs lower."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The police are still trying to ___ what happened that night.",
-    answers: ["find out", "find up", "find over", "find through"],
-    correct: 0,
-    explanation: "\"Find out\" means to discover information or learn something."
-},
+    {
+        category: "Vocabulary",
+        question: "She has always been very ___ of her younger brother.",
+        answers: ["supportive", "dependent", "reliable", "responsible"],
+        correct: 0,
+        explanation: "\"Supportive of someone\" means giving them encouragement and help."
+    },
 
-{
-    category: "Vocabulary",
-    question: "We need to find a more ___ solution to this problem.",
-    answers: ["practical", "actual", "temporary", "traditional"],
-    correct: 0,
-    explanation: "\"Practical\" means suitable and effective for a particular situation."
-},
+    {
+        category: "Vocabulary",
+        question: "The police are still trying to ___ what happened that night.",
+        answers: ["find out", "find up", "find over", "find through"],
+        correct: 0,
+        explanation: "\"Find out\" means to discover information or learn something."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The new law is expected to have a significant ___ on the environment.",
-    answers: ["affect", "effect", "result", "cause"],
-    correct: 1,
-    explanation: "\"Effect\" is a noun meaning the result or influence of something."
-},
+    {
+        category: "Vocabulary",
+        question: "We need to find a more ___ solution to this problem.",
+        answers: ["practical", "actual", "temporary", "traditional"],
+        correct: 0,
+        explanation: "\"Practical\" means suitable and effective for a particular situation."
+    },
 
-{
-    category: "Vocabulary",
-    question: "He refused to ___ responsibility for the mistake.",
-    answers: ["take", "do", "make", "hold"],
-    correct: 0,
-    explanation: "The correct expression is \"take responsibility\"."
-},
+    {
+        category: "Vocabulary",
+        question: "The new law is expected to have a significant ___ on the environment.",
+        answers: ["affect", "effect", "result", "cause"],
+        correct: 1,
+        explanation: "\"Effect\" is a noun meaning the result or influence of something."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The instructions were so ___ that nobody knew what to do.",
-    answers: ["confusing", "confused", "unclear", "uncertain"],
-    correct: 0,
-    explanation: "\"Confusing\" describes something that causes people to feel confused."
-},
+    {
+        category: "Vocabulary",
+        question: "He refused to ___ responsibility for the mistake.",
+        answers: ["take", "do", "make", "hold"],
+        correct: 0,
+        explanation: "The correct expression is \"take responsibility\"."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The athlete managed to ___ the record despite being injured.",
-    answers: ["break", "damage", "destroy", "crack"],
-    correct: 0,
-    explanation: "\"Break a record\" is the standard expression."
-},
+    {
+        category: "Vocabulary",
+        question: "The instructions were so ___ that nobody knew what to do.",
+        answers: ["confusing", "confused", "unclear", "uncertain"],
+        correct: 0,
+        explanation: "\"Confusing\" describes something that causes people to feel confused."
+    },
 
-{
-    category: "Vocabulary",
-    question: "It took me several weeks to ___ to my new school.",
-    answers: ["adapt", "adopt", "accept", "approve"],
-    correct: 0,
-    explanation: "\"Adapt to\" means to change your behaviour or habits to suit a new situation."
-},
+    {
+        category: "Vocabulary",
+        question: "The athlete managed to ___ the record despite being injured.",
+        answers: ["break", "damage", "destroy", "crack"],
+        correct: 0,
+        explanation: "\"Break a record\" is the standard expression."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The manager gave us some useful ___ on how to improve our presentation.",
-    answers: ["advice", "advices", "advise", "suggestion"],
-    correct: 0,
-    explanation: "\"Advice\" is an uncountable noun meaning suggestions about what someone should do."
-},
+    {
+        category: "Vocabulary",
+        question: "It took me several weeks to ___ to my new school.",
+        answers: ["adapt", "adopt", "accept", "approve"],
+        correct: 0,
+        explanation: "\"Adapt to\" means to change your behaviour or habits to suit a new situation."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The government is taking measures to ___ unemployment.",
-    answers: ["combat", "compete", "complete", "combine"],
-    correct: 0,
-    explanation: "\"Combat unemployment\" means to take action to reduce or deal with unemployment."
-},
+    {
+        category: "Vocabulary",
+        question: "The manager gave us some useful ___ on how to improve our presentation.",
+        answers: ["advice", "advices", "advise", "suggestion"],
+        correct: 0,
+        explanation: "\"Advice\" is an uncountable noun meaning suggestions about what someone should do."
+    },
 
-{
-    category: "Vocabulary",
-    question: "She was ___ disappointed when she found out that the concert had been cancelled.",
-    answers: ["deeply", "strongly", "heavily", "greatlyly"],
-    correct: 0,
-    explanation: "\"Deeply disappointed\" is a natural collocation meaning very disappointed."
-},
+    {
+        category: "Vocabulary",
+        question: "The government is taking measures to ___ unemployment.",
+        answers: ["combat", "compete", "complete", "combine"],
+        correct: 0,
+        explanation: "\"Combat unemployment\" means to take action to reduce or deal with unemployment."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The museum contains a ___ collection of ancient artefacts.",
-    answers: ["vast", "wide", "long", "tall"],
-    correct: 0,
-    explanation: "\"Vast\" means extremely large in size or amount."
-},
+    {
+        category: "Vocabulary",
+        question: "She was ___ disappointed when she found out that the concert had been cancelled.",
+        answers: ["deeply", "strongly", "heavily", "greatlyly"],
+        correct: 0,
+        explanation: "\"Deeply disappointed\" is a natural collocation meaning very disappointed."
+    },
 
-{
-    category: "Vocabulary",
-    question: "You should ___ advantage of this opportunity while you can.",
-    answers: ["make", "take", "do", "get"],
-    correct: 1,
-    explanation: "The correct expression is \"take advantage of\", meaning to make good use of an opportunity."
-},
+    {
+        category: "Vocabulary",
+        question: "The museum contains a ___ collection of ancient artefacts.",
+        answers: ["vast", "wide", "long", "tall"],
+        correct: 0,
+        explanation: "\"Vast\" means extremely large in size or amount."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The students were asked to ___ a decision before the end of the lesson.",
-    answers: ["make", "do", "take", "create"],
-    correct: 0,
-    explanation: "\"Make a decision\" is the standard expression."
-},
+    {
+        category: "Vocabulary",
+        question: "You should ___ advantage of this opportunity while you can.",
+        answers: ["make", "take", "do", "get"],
+        correct: 1,
+        explanation: "The correct expression is \"take advantage of\", meaning to make good use of an opportunity."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The restaurant has a good ___ for providing excellent service.",
-    answers: ["reputation", "fame", "rumour", "recognition"],
-    correct: 0,
-    explanation: "\"Reputation\" means the general opinion people have about someone or something."
-},
+    {
+        category: "Vocabulary",
+        question: "The students were asked to ___ a decision before the end of the lesson.",
+        answers: ["make", "do", "take", "create"],
+        correct: 0,
+        explanation: "\"Make a decision\" is the standard expression."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The instructions were ___ difficult to understand.",
-    answers: ["fairly", "fair", "fairness", "fairest"],
-    correct: 0,
-    explanation: "\"Fairly difficult\" means moderately or quite difficult."
-},
+    {
+        category: "Vocabulary",
+        question: "The restaurant has a good ___ for providing excellent service.",
+        answers: ["reputation", "fame", "rumour", "recognition"],
+        correct: 0,
+        explanation: "\"Reputation\" means the general opinion people have about someone or something."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The company needs to ___ its employees with the necessary equipment.",
-    answers: ["provide", "offer", "give", "send"],
-    correct: 0,
-    explanation: "\"Provide someone with something\" is the correct structure."
-},
+    {
+        category: "Vocabulary",
+        question: "The instructions were ___ difficult to understand.",
+        answers: ["fairly", "fair", "fairness", "fairest"],
+        correct: 0,
+        explanation: "\"Fairly difficult\" means moderately or quite difficult."
+    },
 
-{
-    category: "Vocabulary",
-    question: "After years of research, scientists finally made a major ___ in the field.",
-    answers: ["breakthrough", "breakdown", "breakout", "breakaway"],
-    correct: 0,
-    explanation: "A \"breakthrough\" is an important discovery or development."
-},
+    {
+        category: "Vocabulary",
+        question: "The company needs to ___ its employees with the necessary equipment.",
+        answers: ["provide", "offer", "give", "send"],
+        correct: 0,
+        explanation: "\"Provide someone with something\" is the correct structure."
+    },
 
-{
-    category: "Vocabulary",
-    question: "The journey was delayed due to ___ weather conditions.",
-    answers: ["severe", "hard", "powerful", "heavy"],
-    correct: 0,
-    explanation: "\"Severe weather conditions\" is a natural expression for very bad or dangerous weather."
-},
+    {
+        category: "Vocabulary",
+        question: "After years of research, scientists finally made a major ___ in the field.",
+        answers: ["breakthrough", "breakdown", "breakout", "breakaway"],
+        correct: 0,
+        explanation: "A \"breakthrough\" is an important discovery or development."
+    },
 
-{
-    category: "Vocabulary",
-    question: "His explanation was so ___ that everyone understood the problem immediately.",
-    answers: ["convincing", "convinced", "persuasive", "persuaded"],
-    correct: 0,
-    explanation: "\"Convincing\" describes something that makes people believe that something is true or correct."
-},
+    {
+        category: "Vocabulary",
+        question: "The journey was delayed due to ___ weather conditions.",
+        answers: ["severe", "hard", "powerful", "heavy"],
+        correct: 0,
+        explanation: "\"Severe weather conditions\" is a natural expression for very bad or dangerous weather."
+    },
 
-
+    {
+        category: "Vocabulary",
+        question: "His explanation was so ___ that everyone understood the problem immediately.",
+        answers: ["convincing", "convinced", "persuasive", "persuaded"],
+        correct: 0,
+        explanation: "\"Convincing\" describes something that makes people believe that something is true or correct."
+    }
 
 ];
+
+
+// ============================================================
+// B1 COACH DATA
+// ============================================================
+
+const COACH_STORAGE_KEY = "b1CoachData";
+
+
+// ===============================
+// GET COACH DATA
+// ===============================
+
+function getCoachData() {
+
+    const savedData = localStorage.getItem(COACH_STORAGE_KEY);
+
+    if (!savedData) {
+
+        return {
+            examDate: null,
+            planStartDate: null,
+            planDays: 90,
+            diagnostic: null,
+            progress: {
+                questionsAnswered: 0,
+                correctAnswers: 0,
+                accuracy: 0,
+                daysCompleted: 0,
+                lastStudyDate: null,
+                categoryStats: {}
+            },
+            dailyResults: []
+        };
+
+    }
+
+    try {
+
+        const data = JSON.parse(savedData);
+
+        if (!data.progress) {
+            data.progress = {};
+        }
+
+        if (!data.progress.categoryStats) {
+            data.progress.categoryStats = {};
+        }
+
+        if (!data.dailyResults) {
+            data.dailyResults = [];
+        }
+
+        return data;
+
+    } catch (error) {
+
+        console.error("Could not read B1 Coach data:", error);
+
+        return {
+            examDate: null,
+            planStartDate: null,
+            planDays: 90,
+            diagnostic: null,
+            progress: {
+                questionsAnswered: 0,
+                correctAnswers: 0,
+                accuracy: 0,
+                daysCompleted: 0,
+                lastStudyDate: null,
+                categoryStats: {}
+            },
+            dailyResults: []
+        };
+
+    }
+
+}
+
+
+// ===============================
+// SAVE COACH DATA
+// ===============================
+
+function saveCoachData(data) {
+
+    localStorage.setItem(
+        COACH_STORAGE_KEY,
+        JSON.stringify(data)
+    );
+
+}
+
+
+// ===============================
+// GET TODAY
+// ===============================
+
+function getTodayString() {
+
+    const today = new Date();
+
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+
+}
+
+
+// ===============================
+// RECORD QUIZ RESULT
+// ===============================
+
+function recordCoachResult() {
+
+    const data = getCoachData();
+
+    const total = currentQuestions.length;
+
+    if (total === 0) {
+        return;
+    }
+
+    const percentage = Math.round(
+        (score / total) * 100
+    );
+
+    // -------------------------------
+    // Overall progress
+    // -------------------------------
+
+    data.progress.questionsAnswered =
+        Number(data.progress.questionsAnswered || 0) + total;
+
+    data.progress.correctAnswers =
+        Number(data.progress.correctAnswers || 0) + score;
+
+    data.progress.accuracy =
+        Math.round(
+            (
+                data.progress.correctAnswers /
+                data.progress.questionsAnswered
+            ) * 100
+        );
+
+    data.progress.lastStudyDate =
+        getTodayString();
+
+
+    // -------------------------------
+    // Category statistics
+    // -------------------------------
+
+    const categoryTotals = {};
+
+    currentQuestions.forEach(function(question) {
+
+        if (!categoryTotals[question.category]) {
+
+            categoryTotals[question.category] = {
+                questions: 0,
+                correct: 0
+            };
+
+        }
+
+        categoryTotals[question.category].questions++;
+
+    });
+
+
+    // Count correct answers by category.
+
+    // We cannot reconstruct individual answers after the quiz
+    // from the old system, so the result is distributed only
+    // at the quiz/category level here.
+
+    if (currentQuestions.length > 0) {
+
+        if (selectedCategory !== "Mixed Practice") {
+
+            if (!data.progress.categoryStats[selectedCategory]) {
+
+                data.progress.categoryStats[selectedCategory] = {
+                    questions: 0,
+                    correct: 0,
+                    accuracy: 0
+                };
+
+            }
+
+            data.progress.categoryStats[selectedCategory].questions += total;
+
+            data.progress.categoryStats[selectedCategory].correct += score;
+
+            data.progress.categoryStats[selectedCategory].accuracy =
+                Math.round(
+                    (
+                        data.progress.categoryStats[selectedCategory].correct /
+                        data.progress.categoryStats[selectedCategory].questions
+                    ) * 100
+                );
+
+        }
+
+    }
+
+
+    // -------------------------------
+    // Daily result
+    // -------------------------------
+
+    const today = getTodayString();
+
+    const dailyResult = {
+        date: today,
+        category: selectedCategory,
+        questions: total,
+        correct: score,
+        percentage: percentage
+    };
+
+
+    data.dailyResults.push(dailyResult);
+
+
+    // Keep only the latest 100 results.
+    if (data.dailyResults.length > 100) {
+
+        data.dailyResults =
+            data.dailyResults.slice(-100);
+
+    }
+
+
+    // -------------------------------
+    // Completed study day
+    // -------------------------------
+
+    const alreadyCompletedToday =
+        data.dailyResults.filter(function(result) {
+
+            return result.date === today;
+
+        }).length > 1;
+
+
+    if (!alreadyCompletedToday) {
+
+        data.progress.daysCompleted =
+            Number(data.progress.daysCompleted || 0) + 1;
+
+    }
+
+
+    saveCoachData(data);
+
+}
 
 
 // ===============================
@@ -936,97 +1226,191 @@ const questions = [
 function showScreen(id) {
 
     document.querySelectorAll(".screen").forEach(function(screen) {
+
         screen.classList.remove("active");
+
     });
 
-    const screen = document.getElementById(id);
+
+    const screen =
+        document.getElementById(id);
+
 
     if (screen) {
+
         screen.classList.add("active");
+
     }
 
+
     window.scrollTo(0, 0);
+
 }
 
 
 // ===============================
-// B2
+// B2 LEVEL BUTTON
 // ===============================
 
-document.getElementById("b2LevelButton").addEventListener("click", function() {
-    showScreen("practiceMenu");
-});
+const b2LevelButton =
+    document.getElementById("b2LevelButton");
+
+if (b2LevelButton) {
+
+    b2LevelButton.addEventListener("click", function() {
+
+        showScreen("practiceMenu");
+
+    });
+
+}
+
+
+// ===============================
+// OPEN PRACTICE FROM URL
+// ===============================
 
 if (categoryFromURL) {
+
     showScreen("practiceMenu");
 
+
     document.querySelectorAll(".practice-card").forEach(function(card) {
+
         if (card.dataset.category === categoryFromURL) {
+
             card.classList.add("selected");
+
         }
+
     });
+
 }
+
 
 // ===============================
 // PRO LEVELS
 // ===============================
 
-const proModal = document.getElementById("proModal");
-const closeProModal = document.getElementById("closeProModal");
-const laterProButton = document.getElementById("laterProButton");
-const unlockProButton = document.getElementById("unlockProButton");
+const proModal =
+    document.getElementById("proModal");
+
+const closeProModal =
+    document.getElementById("closeProModal");
+
+const laterProButton =
+    document.getElementById("laterProButton");
+
+const unlockProButton =
+    document.getElementById("unlockProButton");
+
 
 document.querySelectorAll(".pro-level").forEach(function(level) {
 
     level.addEventListener("click", function() {
 
-        proModal.style.display = "flex";
+        if (proModal) {
+
+            proModal.style.display = "flex";
+
+        }
 
     });
 
 });
 
 
-closeProModal.addEventListener("click", function() {
+if (closeProModal) {
 
-    proModal.style.display = "none";
+    closeProModal.addEventListener("click", function() {
 
-});
+        proModal.style.display = "none";
 
+    });
 
-laterProButton.addEventListener("click", function() {
-
-    proModal.style.display = "none";
-
-});
+}
 
 
-unlockProButton.addEventListener("click", function() {
+if (laterProButton) {
 
-    alert("Error Coach Pro will be available soon.");
+    laterProButton.addEventListener("click", function() {
 
-});
+        proModal.style.display = "none";
+
+    });
+
+}
+
+
+if (unlockProButton) {
+
+    unlockProButton.addEventListener("click", function() {
+
+        alert("Error Coach Pro will be available soon.");
+
+    });
+
+}
 
 
 // ===============================
 // HOME BUTTONS
 // ===============================
 
-document.getElementById("practiceHomeButton").addEventListener("click", function() {
-    showScreen("home");
-});
+const practiceHomeButton =
+    document.getElementById("practiceHomeButton");
 
-document.getElementById("homeButton").addEventListener("click", function() {
-    showScreen("home");
-});
+if (practiceHomeButton) {
 
-document.getElementById("statsHomeButton").addEventListener("click", function() {
-    showScreen("home");
-});
+    practiceHomeButton.addEventListener("click", function() {
 
-document.getElementById("practiceAgainButton").addEventListener("click", function() {
-    showScreen("practiceMenu");
-});
+        showScreen("home");
+
+    });
+
+}
+
+
+const homeButton =
+    document.getElementById("homeButton");
+
+if (homeButton) {
+
+    homeButton.addEventListener("click", function() {
+
+        showScreen("home");
+
+    });
+
+}
+
+
+const statsHomeButton =
+    document.getElementById("statsHomeButton");
+
+if (statsHomeButton) {
+
+    statsHomeButton.addEventListener("click", function() {
+
+        showScreen("home");
+
+    });
+
+}
+
+
+const practiceAgainButton =
+    document.getElementById("practiceAgainButton");
+
+if (practiceAgainButton) {
+
+    practiceAgainButton.addEventListener("click", function() {
+
+        showScreen("practiceMenu");
+
+    });
+
+}
 
 
 // ===============================
@@ -1038,12 +1422,17 @@ document.querySelectorAll(".practice-card").forEach(function(button) {
     button.addEventListener("click", function() {
 
         document.querySelectorAll(".practice-card").forEach(function(card) {
+
             card.classList.remove("selected");
+
         });
+
 
         button.classList.add("selected");
 
-        selectedCategory = button.dataset.category;
+
+        selectedCategory =
+            button.dataset.category;
 
     });
 
@@ -1056,19 +1445,26 @@ document.querySelectorAll(".practice-card").forEach(function(button) {
 
 if (categoryFromURL) {
 
-    const categoryButton = document.querySelector(
-        `.practice-card[data-category="${categoryFromURL}"]`
-    );
+    const categoryButton =
+        document.querySelector(
+            `.practice-card[data-category="${categoryFromURL}"]`
+        );
+
 
     if (categoryButton) {
 
         document.querySelectorAll(".practice-card").forEach(function(card) {
+
             card.classList.remove("selected");
+
         });
+
 
         categoryButton.classList.add("selected");
 
-        selectedCategory = categoryFromURL;
+
+        selectedCategory =
+            categoryFromURL;
 
     }
 
@@ -1084,12 +1480,17 @@ document.querySelectorAll(".length-button").forEach(function(button) {
     button.addEventListener("click", function() {
 
         document.querySelectorAll(".length-button").forEach(function(btn) {
+
             btn.classList.remove("selected");
+
         });
+
 
         button.classList.add("selected");
 
-        selectedLength = Number(button.dataset.length);
+
+        selectedLength =
+            Number(button.dataset.length);
 
     });
 
@@ -1100,11 +1501,18 @@ document.querySelectorAll(".length-button").forEach(function(button) {
 // START PRACTICE
 // ===============================
 
-document.getElementById("startPracticeButton").addEventListener("click", function() {
+const startPracticeButton =
+    document.getElementById("startPracticeButton");
 
-    startQuiz();
+if (startPracticeButton) {
 
-});
+    startPracticeButton.addEventListener("click", function() {
+
+        startQuiz();
+
+    });
+
+}
 
 
 // ===============================
@@ -1115,41 +1523,57 @@ function startQuiz() {
 
     let availableQuestions;
 
+
     if (selectedCategory === "Mixed Practice") {
 
-        availableQuestions = questions.slice();
+        availableQuestions =
+            questions.slice();
 
     } else {
 
-        availableQuestions = questions.filter(function(question) {
-            return question.category === selectedCategory;
-        });
+        availableQuestions =
+            questions.filter(function(question) {
+
+                return question.category === selectedCategory;
+
+            });
 
     }
+
 
     if (availableQuestions.length === 0) {
 
-        alert("There are no questions available in this category yet.");
+        alert(
+            "There are no questions available in this category yet."
+        );
 
         return;
+
     }
 
 
-    availableQuestions = shuffle(availableQuestions);
+    availableQuestions =
+        shuffle(availableQuestions);
+
 
     currentQuestions = [];
+
 
     for (let i = 0; i < selectedLength; i++) {
 
         currentQuestions.push(
-            availableQuestions[i % availableQuestions.length]
+            availableQuestions[
+                i % availableQuestions.length
+            ]
         );
 
     }
 
 
     currentQuestionIndex = 0;
+
     score = 0;
+
 
     showScreen("quiz");
 
@@ -1164,36 +1588,98 @@ function startQuiz() {
 
 function loadQuestion() {
 
-    const question = currentQuestions[currentQuestionIndex];
+    const question =
+        currentQuestions[currentQuestionIndex];
 
-    document.getElementById("question").innerText =
-        question.question;
 
-    document.getElementById("questionCategory").innerText =
-        question.category.toUpperCase();
+    const questionElement =
+        document.getElementById("question");
 
-document.getElementById("questionNumber").innerText = "Question " + (currentQuestionIndex + 1);
+    if (questionElement) {
 
-document.getElementById("totalQuestions").innerText =
-    (currentQuestionIndex + 1) + " / " + currentQuestions.length;
+        questionElement.innerText =
+            question.question;
 
-document.getElementById("progress").style.width =
-    (((currentQuestionIndex + 1) / currentQuestions.length) * 100) + "%";
+    }
+
+
+    const categoryElement =
+        document.getElementById("questionCategory");
+
+    if (categoryElement) {
+
+        categoryElement.innerText =
+            question.category.toUpperCase();
+
+    }
+
+
+    const questionNumberElement =
+        document.getElementById("questionNumber");
+
+    if (questionNumberElement) {
+
+        questionNumberElement.innerText =
+            "Question " +
+            (currentQuestionIndex + 1);
+
+    }
+
+
+    const totalQuestionsElement =
+        document.getElementById("totalQuestions");
+
+    if (totalQuestionsElement) {
+
+        totalQuestionsElement.innerText =
+            (currentQuestionIndex + 1) +
+            " / " +
+            currentQuestions.length;
+
+    }
+
+
+    const progressElement =
+        document.getElementById("progress");
+
+    if (progressElement) {
+
+        progressElement.style.width =
+            (
+                (
+                    (currentQuestionIndex + 1) /
+                    currentQuestions.length
+                ) * 100
+            ) + "%";
+
+    }
 
 
     const answersContainer =
         document.getElementById("answers");
+
+
+    if (!answersContainer) {
+        return;
+    }
+
 
     answersContainer.innerHTML = "";
 
 
     question.answers.forEach(function(answer, index) {
 
-        const button = document.createElement("button");
+        const button =
+            document.createElement("button");
 
-        button.className = "answer-button";
 
-        button.innerText = answer;
+        button.className =
+            "answer-button";
+
+
+        button.innerText =
+            answer;
+
 
         button.addEventListener("click", function() {
 
@@ -1201,14 +1687,30 @@ document.getElementById("progress").style.width =
 
         });
 
+
         answersContainer.appendChild(button);
 
     });
 
 
-    document.getElementById("feedback").classList.add("hidden");
+    const feedback =
+        document.getElementById("feedback");
 
-    document.getElementById("nextButton").classList.add("hidden");
+    if (feedback) {
+
+        feedback.classList.add("hidden");
+
+    }
+
+
+    const nextButton =
+        document.getElementById("nextButton");
+
+    if (nextButton) {
+
+        nextButton.classList.add("hidden");
+
+    }
 
 }
 
@@ -1219,14 +1721,18 @@ document.getElementById("progress").style.width =
 
 function selectAnswer(selectedIndex) {
 
-    const question = currentQuestions[currentQuestionIndex];
+    const question =
+        currentQuestions[currentQuestionIndex];
+
 
     const answerButtons =
         document.querySelectorAll(".answer-button");
 
 
     answerButtons.forEach(function(button) {
+
         button.disabled = true;
+
     });
 
 
@@ -1234,18 +1740,38 @@ function selectAnswer(selectedIndex) {
 
         score++;
 
-        answerButtons[selectedIndex].classList.add("correct");
+
+        if (answerButtons[selectedIndex]) {
+
+            answerButtons[selectedIndex]
+                .classList.add("correct");
+
+        }
+
 
         showFeedback(
             "Correct! ✓",
             question.explanation
         );
 
+
     } else {
 
-        answerButtons[selectedIndex].classList.add("incorrect");
+        if (answerButtons[selectedIndex]) {
 
-        answerButtons[question.correct].classList.add("correct");
+            answerButtons[selectedIndex]
+                .classList.add("incorrect");
+
+        }
+
+
+        if (answerButtons[question.correct]) {
+
+            answerButtons[question.correct]
+                .classList.add("correct");
+
+        }
+
 
         showFeedback(
             "Not quite.",
@@ -1255,8 +1781,15 @@ function selectAnswer(selectedIndex) {
     }
 
 
-    document.getElementById("nextButton")
-        .classList.remove("hidden");
+    const nextButton =
+        document.getElementById("nextButton");
+
+
+    if (nextButton) {
+
+        nextButton.classList.remove("hidden");
+
+    }
 
 }
 
@@ -1267,14 +1800,37 @@ function selectAnswer(selectedIndex) {
 
 function showFeedback(title, text) {
 
-    document.getElementById("feedbackTitle").innerText =
-        title;
+    const feedbackTitle =
+        document.getElementById("feedbackTitle");
 
-    document.getElementById("feedbackText").innerText =
-        text;
+    const feedbackText =
+        document.getElementById("feedbackText");
 
-    document.getElementById("feedback")
-        .classList.remove("hidden");
+    const feedback =
+        document.getElementById("feedback");
+
+
+    if (feedbackTitle) {
+
+        feedbackTitle.innerText =
+            title;
+
+    }
+
+
+    if (feedbackText) {
+
+        feedbackText.innerText =
+            text;
+
+    }
+
+
+    if (feedback) {
+
+        feedback.classList.remove("hidden");
+
+    }
 
 }
 
@@ -1283,21 +1839,32 @@ function showFeedback(title, text) {
 // NEXT QUESTION
 // ===============================
 
-document.getElementById("nextButton").addEventListener("click", function() {
+const nextButton =
+    document.getElementById("nextButton");
 
-    currentQuestionIndex++;
+if (nextButton) {
 
-    if (currentQuestionIndex >= currentQuestions.length) {
+    nextButton.addEventListener("click", function() {
 
-        finishQuiz();
+        currentQuestionIndex++;
 
-    } else {
 
-        loadQuestion();
+        if (
+            currentQuestionIndex >=
+            currentQuestions.length
+        ) {
 
-    }
+            finishQuiz();
 
-});
+        } else {
+
+            loadQuestion();
+
+        }
+
+    });
+
+}
 
 
 // ===============================
@@ -1306,58 +1873,139 @@ document.getElementById("nextButton").addEventListener("click", function() {
 
 function finishQuiz() {
 
-    const total = currentQuestions.length;
+    const total =
+        currentQuestions.length;
+
 
     const percentage =
-        Math.round((score / total) * 100);
+        Math.round(
+            (score / total) * 100
+        );
 
 
-    document.getElementById("score").innerText =
-        `${score}/${total}`;
+    const scoreElement =
+        document.getElementById("score");
 
-    document.getElementById("resultPercentage").innerText =
-        `${percentage}%`;
+    if (scoreElement) {
 
-    document.getElementById("resultCorrect").innerText =
-        score;
+        scoreElement.innerText =
+            `${score}/${total}`;
 
-    document.getElementById("resultQuestions").innerText =
-        total;
+    }
+
+
+    const resultPercentage =
+        document.getElementById("resultPercentage");
+
+    if (resultPercentage) {
+
+        resultPercentage.innerText =
+            `${percentage}%`;
+
+    }
+
+
+    const resultCorrect =
+        document.getElementById("resultCorrect");
+
+    if (resultCorrect) {
+
+        resultCorrect.innerText =
+            score;
+
+    }
+
+
+    const resultQuestions =
+        document.getElementById("resultQuestions");
+
+    if (resultQuestions) {
+
+        resultQuestions.innerText =
+            total;
+
+    }
+
+
+    const resultMessage =
+        document.getElementById("resultMessage");
+
+    const resultDescription =
+        document.getElementById("resultDescription");
 
 
     if (percentage === 100) {
 
-        document.getElementById("resultMessage").innerText =
-            "Perfect score! 🏆";
+        if (resultMessage) {
 
-        document.getElementById("resultDescription").innerText =
-            "Excellent work. You've mastered this practice.";
+            resultMessage.innerText =
+                "Perfect score! 🏆";
+
+        }
+
+        if (resultDescription) {
+
+            resultDescription.innerText =
+                "Excellent work. You've mastered this practice.";
+
+        }
 
     } else if (percentage >= 80) {
 
-        document.getElementById("resultMessage").innerText =
-            "Great job! 🎯";
+        if (resultMessage) {
 
-        document.getElementById("resultDescription").innerText =
-            "Your English is looking strong. Keep practising.";
+            resultMessage.innerText =
+                "Great job! 🎯";
+
+        }
+
+        if (resultDescription) {
+
+            resultDescription.innerText =
+                "Your English is looking strong. Keep practising.";
+
+        }
 
     } else if (percentage >= 60) {
 
-        document.getElementById("resultMessage").innerText =
-            "Good work! 👍";
+        if (resultMessage) {
 
-        document.getElementById("resultDescription").innerText =
-            "You're making progress. Keep working on your weak areas.";
+            resultMessage.innerText =
+                "Good work! 👍";
+
+        }
+
+        if (resultDescription) {
+
+            resultDescription.innerText =
+                "You're making progress. Keep working on your weak areas.";
+
+        }
 
     } else {
 
-        document.getElementById("resultMessage").innerText =
-            "Keep practising! 💪";
+        if (resultMessage) {
 
-        document.getElementById("resultDescription").innerText =
-            "Every mistake is a chance to learn something new.";
+            resultMessage.innerText =
+                "Keep practising! 💪";
+
+        }
+
+        if (resultDescription) {
+
+            resultDescription.innerText =
+                "Every mistake is a chance to learn something new.";
+
+        }
 
     }
+
+
+    // ===============================
+    // SAVE RESULT TO B1 COACH
+    // ===============================
+
+    recordCoachResult();
 
 
     showScreen("results");
@@ -1369,11 +2017,94 @@ function finishQuiz() {
 // RETRY
 // ===============================
 
-document.getElementById("retryButton").addEventListener("click", function() {
+const retryButton =
+    document.getElementById("retryButton");
 
-    startQuiz();
+if (retryButton) {
 
-});
+    retryButton.addEventListener("click", function() {
+
+        startQuiz();
+
+    });
+
+}
+
+
+// ===============================
+// RETURN TO B1 COACH
+// ===============================
+
+function returnToCoach() {
+
+    window.location.href =
+        "b1-coach.html";
+
+}
+
+
+// ===============================
+// CREATE COACH RETURN BUTTON
+// ===============================
+//
+// When practice is opened with:
+// ?category=Grammar&coach=1
+//
+// the results screen receives a button
+// allowing the user to return to the Coach.
+//
+
+function setupCoachMode() {
+
+    if (!coachMode) {
+        return;
+    }
+
+
+    const resultsScreen =
+        document.getElementById("results");
+
+
+    if (!resultsScreen) {
+        return;
+    }
+
+
+    if (
+        document.getElementById("returnToCoachButton")
+    ) {
+        return;
+    }
+
+
+    const button =
+        document.createElement("button");
+
+
+    button.id =
+        "returnToCoachButton";
+
+
+    button.className =
+        "primary-button";
+
+
+    button.innerText =
+        "Back to B1 Coach";
+
+
+    button.addEventListener(
+        "click",
+        returnToCoach
+    );
+
+
+    resultsScreen.appendChild(button);
+
+}
+
+
+setupCoachMode();
 
 
 // ===============================
@@ -1382,15 +2113,29 @@ document.getElementById("retryButton").addEventListener("click", function() {
 
 function shuffle(array) {
 
-    for (let i = array.length - 1; i > 0; i--) {
+    for (
+        let i = array.length - 1;
+        i > 0;
+        i--
+    ) {
 
         const j =
-            Math.floor(Math.random() * (i + 1));
+            Math.floor(
+                Math.random() * (i + 1)
+            );
 
-        [array[i], array[j]] =
-            [array[j], array[i]];
+
+        [
+            array[i],
+            array[j]
+        ] =
+        [
+            array[j],
+            array[i]
+        ];
 
     }
+
 
     return array;
 
