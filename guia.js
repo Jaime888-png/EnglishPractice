@@ -850,6 +850,36 @@ function createGrammar(items) {
 function renderGuide(data) {
 
     document.title = `Guía ${data.name} | English Practice`;
+        // SEO dinámico
+    const seoDescriptions = {
+        A1: "Guía de inglés A1 con Writing, Speaking, Listening, Reading, Grammar y Vocabulary. Consejos y trucos para empezar a aprender inglés.",
+        A2: "Guía de inglés A2 con Writing, Speaking, Listening, Reading, Grammar y Vocabulary. Mejora tu inglés con consejos y práctica.",
+        B1: "Guía de inglés B1 con Writing, Speaking, Listening, Reading, Grammar y Vocabulary. Aprende a comunicarte con más fluidez.",
+        B2: "Guía de inglés B2 con Writing, Speaking, Listening, Reading, Grammar y Vocabulary. Mejora tu inglés y prepara tus exámenes.",
+        C1: "Guía de inglés C1 con Writing, Speaking, Listening, Reading, Grammar y Vocabulary. Perfecciona tu inglés avanzado.",
+        C2: "Guía de inglés C2 con Writing, Speaking, Listening, Reading, Grammar y Vocabulary. Lleva tu inglés al máximo nivel."
+    };
+
+    let descriptionTag = document.querySelector('meta[name="description"]');
+
+    if (!descriptionTag) {
+        descriptionTag = document.createElement("meta");
+        descriptionTag.name = "description";
+        document.head.appendChild(descriptionTag);
+    }
+
+    descriptionTag.content = seoDescriptions[data.name];
+
+    let canonicalTag = document.querySelector('link[rel="canonical"]');
+
+    if (!canonicalTag) {
+        canonicalTag = document.createElement("link");
+        canonicalTag.rel = "canonical";
+        document.head.appendChild(canonicalTag);
+    }
+
+    canonicalTag.href =
+        `https://jaime888-png.github.io/EnglishPractice/guia.html?nivel=${data.name}`;
 
     document.getElementById("levelBadge").textContent = data.name;
     document.getElementById("guideTitle").textContent = `Guía ${data.name}`;
